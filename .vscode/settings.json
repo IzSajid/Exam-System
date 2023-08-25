@@ -1,0 +1,6 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnSave": false,
+    "eslint.run": "onType",
+    "php.validate.run": "onSave"
+}
