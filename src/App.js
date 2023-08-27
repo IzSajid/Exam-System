@@ -4,6 +4,7 @@ import Login from './Authentication/Login';
 import Signup from './Authentication/Signup';
 import Home from './Home/Home';
 import Header from './Header-Footer/Header';
+import Banner from './Home/Banner/Banner';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
     <Route path='/home' element={<Home></Home>}></Route>
     <Route path='/signup' element={<Signup></Signup>}></Route>
     <Route path='/login' element={<Login></Login>}></Route>
+    <Route path='/banner' element={<Banner></Banner>}></Route>
     <Route></Route>
 
    </Routes>
