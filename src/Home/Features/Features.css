@@ -1,0 +1,9 @@
+.features-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 60px;
+}
+.features-title{
+    text-align: center;
+    color: rgb(5, 11, 20);
+}

@@ -1,7 +1,9 @@
 import React from 'react';
 import { Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate=useNavigate();
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary " bg="dark" data-bs-theme="dark">
     <Container>
@@ -10,7 +12,7 @@ const Header = () => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
          
-          <NavDropdown title="Features" id="collasible-nav-dropdown">
+          <NavDropdown style={{marginLeft:"49rem"}} title="Features" id="collasible-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Notification</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">
               Grades
@@ -20,9 +22,9 @@ const Header = () => {
           </NavDropdown>
         </Nav>
         <Nav>
-        <Nav.Link href="#">New Class</Nav.Link>
-          <Nav.Link href="#">Join Class</Nav.Link>
-          <Nav.Link href="#">My profile</Nav.Link>
+        <Nav.Link className='mr-3' href="#">New Class</Nav.Link>
+          <Nav.Link  className='mr-3' href="#">Join Class</Nav.Link>
+          <button onClick={()=>navigate('/signup')} className="btn btn-sm btn-active btn-primary ml-3 mt-1">SignUP</button>
 
         </Nav>
       </Navbar.Collapse>
