@@ -199,7 +199,7 @@
                                     The platform interacts with the following user devices:
                                 </p>
                                 <br>
-                                <p> 
+                                <p>
                                     Desktop and Laptop Computers: Users access the platform through web browsers on
                                     desktop and laptop computers. The
                                     platform should be compatible with a variety of screen sizes and resolutions.
@@ -223,8 +223,8 @@
                                     The platform relies on network connectivity for the following purposes:
                                 </p>
                                 <br>
-                                
-                                <p> 
+
+                                <p>
                                     Internet Connection: Users require a stable Internet connection to access the
                                     platform, take exams, and submit answers.
                                 </p>
@@ -238,7 +238,9 @@
 
                                 <h3 class="pb-3 pt-5 text-base font-semibold">3.2.4 Printing Devices</h3>
                                 <p>
-                                    While not a primary interface, users may choose to print exam questions or results. The platform should allow users to generate printer-friendly versions of exam content.
+                                    While not a primary interface, users may choose to print exam questions or results.
+                                    The platform should allow users to generate printer-friendly versions of exam
+                                    content.
 
                                 </p>
                                 <h3 class="pb-3 pt-5 text-base font-semibold">3.2.5 Input Devices</h3>
@@ -258,7 +260,7 @@
                                     The platform is accessed by users through modern web browsers, including but not
                                     limited to:
                                 </p>
-                               
+
                                 <li>Google Chrome</li>
                                 <li>Microsoft Edge</li>
                                 <br>
@@ -270,7 +272,7 @@
                                     The platform interacts with the server infrastructure to manage various operations,
                                     including:
                                 </p>
-                                
+
                                 <li>Serving exam content to users</li>
                                 <li>Collecting and storing user answers</li>
                                 <li>Calculating exam results</li>
@@ -290,7 +292,7 @@
                                     The platform is designed to operate on various operating systems, including but not
                                     limited to:
                                 </p>
-                                
+
                                 <li>Windows 7 or higher</li>
                                 <li>Android 7.0 or higher</li>
                                 <br>
@@ -310,7 +312,7 @@
                                     the Hypertext Transfer Protocol (HTTP) and the secure variant, Hypertext Transfer
                                     Protocol Secure (HTTPS). HTTP/HTTPS is utilized for:
                                 </p>
-                                
+
                                 <li>Delivering exam content and questions to users' devices</li>
                                 <li>Receiving users' submitted answers</li>
                                 <li> Displaying results and exam information</li>
@@ -332,7 +334,8 @@
                                 <li>Account-related notifications</li>
                                 <li>Exam reminders</li>
                                 <li> Support-related correspondence</li>
-                                <li>Email communication ensures users are informed about important updates and activities related to their use of the platform</li>
+                                <li>Email communication ensures users are informed about important updates and
+                                    activities related to their use of the platform</li>
                             </section>
 
                             <!--System Features-->
@@ -366,101 +369,108 @@
 
                                 <!--Other Nonfunctional Requirements-->
                                 <section id="five">
-                                    <h3 class="pb-3 pt-5 text-xl font-semibold">5. Other Nonfunctional Requirements
-                                    </h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
-                                        earum natus vel minima quod error maxime, molestias ut. Fuga
-                                        dignissimos nisi nemo necessitatibus quisquam obcaecati et
-                                        reiciendis quaerat accusamus numquam.
-                                    </p>
+                                    <h3 class="pb-3 pt-5 text-xl font-semibold">5. Other Nonfunctional Requirements</h3>
+
+
                                     <section id="five-sub-one">
-                                        <h3 class="pb-3 pt-5 text-xl font-semibold">5.1 Performance Requirements
-                                        </h3>
+                                        <h3 class="pb-3 pt-5 text-l font-semibold">5.1 Performance Requirements</h3>
+
+                                        <h3 class="pb-3 pt-5 text-base font-semibold">5.1.1 Response Time</h3>
+
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                            Labore earum natus vel minima quod error maxime, molestias ut.
-                                            Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati
-                                            et reiciendis quaerat accusamus numquam.
+                                            <strong>Page Loading:</strong> The platform should load pages and exam content within 2
+                                            seconds on average, with a maximum loading time of 5 seconds.
                                         </p>
+                                        <br>
+                                        <p>
+                                            <strong> Question Navigation:</strong> Moving between questions within an exam should take no
+                                            more than 1 second.
+                                        </p>
+
+                                        <h3 class="pb-3 pt-5 text-base font-semibold">5.1.2 Database Access</h3>
+
+                                        <p>
+                                            Database queries should be optimized to ensure that data retrieval and
+                                            storage operations are completed within 500 milliseconds.
+                                        </p>
+
+                                        <h3 class="pb-3 pt-5 text-base font-semibold">5.1.3 Network Latency</h3>
+
+                                        <p>
+                                            The platform should account for network latency and aim to minimize the
+                                            impact of latency on user interactions. Network requests should be designed
+                                            to handle latency of up to 300 milliseconds.
+                                        </p>
+                                        <h3 class="pb-3 pt-5 text-base font-semibold">5.1.4 Device switching</h3>
+
+                                        <p>
+                                            The web application should handle network failure and let the user switch to
+                                            a different device seamlessly without losing any ongoing progress.
+                                        </p>
+
                                     </section>
                                     <section id="five-sub-two">
                                         <h3 class="pb-3 pt-5 text-xl font-semibold">5.2 Safety Requirements</h3>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                            Labore earum natus vel minima quod error maxime, molestias ut.
-                                            Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati
-                                            et reiciendis quaerat accusamus numquam.
+                                            User data should be protected. Any unauthorized access should be prevented.
+                                            All-access needs to be recorded. Any measure that needs to be implemented to
+                                            ensure exam integrity will be implemented. Data of profile and ongoing works
+                                            needs to be backed up properly to ensure there are no data loss.
                                         </p>
                                     </section>
                                     <section id="five-sub-three">
                                         <h3 class="pb-3 pt-5 text-xl font-semibold">5.3 Security Requirements</h3>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                            Labore earum natus vel minima quod error maxime, molestias ut.
-                                            Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati
-                                            et reiciendis quaerat accusamus numquam.
+                                            Some supervising features may require administrator access from the examinee device for the purpose of supervising.
                                         </p>
                                     </section>
                                     <section id="five-sub-four">
                                         <h3 class="pb-3 pt-5 text-xl font-semibold">5.4 Software Quality Attributes
                                         </h3>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                            Labore earum natus vel minima quod error maxime, molestias ut.
-                                            Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati
-                                            et reiciendis quaerat accusamus numquam.
+                                            Invigilator will be easy to use and will only require basic computer skills.
                                         </p>
                                     </section>
-                                    <section id="five-sub-five">
-                                        <h3 class="pb-3 pt-5 text-xl font-semibold">5.5 Business Rules</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                            Labore earum natus vel minima quod error maxime, molestias ut.
-                                            Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati
-                                            et reiciendis quaerat accusamus numquam.
-                                        </p>
-                                    </section>
+                                    
 
                                     <!--Other Requirements-->
                                     <section id="six">
                                         <h3 class="pb-3 pt-5 text-xl font-semibold">6. Other Requirements</h3>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
-                                            earum natus vel minima quod error maxime, molestias ut. Fuga
-                                            dignissimos nisi nemo necessitatibus quisquam obcaecati et
-                                            reiciendis quaerat accusamus numquam.
+                                            (To be determined)
                                         </p>
                                     </section>
+
                                     <section id="Appendix A">
                                         <h3 class="pb-3 pt-5 text-xl font-semibold">Appendix A: Glossary</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
-                                            earum natus vel minima quod error maxime, molestias ut. Fuga
-                                            dignissimos nisi nemo necessitatibus quisquam obcaecati et
-                                            reiciendis quaerat accusamus numquam.
-                                        </p>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
-                                            earum natus vel minima quod error maxime, molestias ut. Fuga
-                                            dignissimos nisi nemo necessitatibus quisquam obcaecati et
-                                            reiciendis quaerat accusamus numquam.
-                                        </p>
+                                   <p> <strong>API:</strong> Abbreviation for Application Programming Interface. A set of rules and protocols that allows different software applications to communicate and interact with each other.</p>
+                                   <br>
+                                   <p><strong>Authentication:</strong> The process of verifying the identity of a user, typically through the use of a username and password or other authentication methods.</p>
+                                   <br>
+                                   <p><strong>Concurrency:</strong>The ability of a system to handle multiple tasks or processes simultaneously.</p>
+                                   <br>
+                                   <p><strong>Encryption:</strong>The process of converting data into a code to prevent unauthorized access.</p>
+                                   <br>
+                                   <p><strong>HTTP:</strong>Abbreviation for Hypertext Transfer Protocol. A protocol used for transferring data over the internet.
+                                   </p>
+                                   <br>
+                                   <p><strong>HTTPS:</strong>Abbreviation for Hypertext Transfer Protocol Secure. A secure version of HTTP that uses encryption to protect data.</p>
+                                   <br>
+                                   <p><strong>Multi-factor Authentication (MFA): </strong> A security process that requires users to provide multiple forms of identification before accessing a system.</p>
+                                   <br>
+                                   <p><strong>Responsive Design:</strong>Design approach that ensures a consistent user experience across different devices and screen sizes.</p>
+                                   <br>
+                                   <p><strong>Role-Based Access Control:</strong>A method of restricting access to system resources based on the roles of individual users.</p>
+                                   <br>
+                                   <p><strong>SSL/TLS:</strong>Abbreviations for Secure Sockets Layer and Transport Layer Security. Protocols used to establish secure and encrypted connections between a user's device and a server.</p>
+                                   <br>
+                                   <p><strong>Web Browser:</strong>Software used to access and view websites on the internet.</p>
+                                   <br>
+                                   
                                     </section>
                                     <section id="Appendix B">
                                         <h3 class="pb-3 pt-5 text-xl font-semibold">Appendix B: Analysis Models</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
-                                            earum natus vel minima quod error maxime, molestias ut. Fuga
-                                            dignissimos nisi nemo necessitatibus quisquam obcaecati et
-                                            reiciendis quaerat accusamus numquam.
-                                        </p>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
-                                            earum natus vel minima quod error maxime, molestias ut. Fuga
-                                            dignissimos nisi nemo necessitatibus quisquam obcaecati et
-                                            reiciendis quaerat accusamus numquam.
-                                        </p>
+                                        <li>Software Scalability</li>
                                     </section>
                                     <section id="Appendix C">
                                         <h3 class="pb-3 pt-5 text-xl font-semibold">Appendix C: To Be Determined
