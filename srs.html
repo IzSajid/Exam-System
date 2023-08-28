@@ -17,132 +17,178 @@
 
 <body>
     <!-- Header -->
-   
-        <section class="mt-0 bg-red-500">
-            <h1 class="text-4xl font-mono font-extrabold text-white text-center p-8">Invigilator</h1>
-        </section>
-        <!-- Main -->
-        <div class="grid grid-cols-6">
-            <!-- Main Content -->
-            <div class="col-span-5 px-8">
-             <div data-te-spy="scroll" data-te-target="#scrollspy1" data-te-offset="200"
-                    class="flex flex-col h-screen relative overflow-auto">
-                    <!--Introduction-->
-                    <section id="one">
-                        <h3 class="pb-3 pt-5 text-xl font-semibold">1. Introduction</h3>
-                        <section id="one-sub-one">
-                            <h3 class="pb-3 pt-5 text-xl font-semibold">1.1 Purpose</h3>
+
+    <section class="fixed top-0 left-0 w-full bg-red-500 p-4 z-10">
+        <h1 class="text-4xl font-mono font-extrabold text-white text-center p-8">Invigilator</h1>
+    </section>
+    <!-- Main -->
+    <div class="grid grid-cols-6 pt-36">
+        <!-- Main Content -->
+        <div class="col-span-5 px-8">
+            <div data-te-spy="scroll" data-te-target="#scrollspy1" data-te-offset="200"
+                class="flex flex-col h-screen relative overflow-auto">
+                <!--Introduction-->
+                <section id="one">
+                    <h3 class="pb-3 pt-5 text-xl font-semibold">1. Introduction</h3>
+                    <section id="one-sub-one">
+                        <h3 class="pb-3 pt-5 text-xl font-semibold">1.1 Purpose</h3>
+                        <p>
+                            The purpose of this document is to present a detailed description of the open-source
+                            software Invigilator. It will explain the purpose and features of the software, the
+                            interfaces of the software, what the software will do and the constraints under which it
+                            must operate. This document is intended for users of the software and also potential
+                            developers.
+                        </p>
+                    </section>
+                    <section id="one-sub-two">
+                        <h3 class="pb-3 pt-5 text-xl font-semibold">1.2 Document Conventions</h3>
+                        <p>
+                            This Document was created based on the IEEE template for System Requirement
+                            Specification
+                            Documents.
+                        </p>
+                    </section>
+                    <section id="one-sub-three">
+                        <h3 class="pb-3 pt-5 text-xl font-semibold">1.3 Intended Audience and Reading Suggestions
+                        </h3>
+                        <p>
+                            Educators to take online tests and students who will be attending the online tests.
+                        </p>
+                    </section>
+                    <section id="one-sub-four">
+                        <h3 class="pb-3 pt-5 text-xl font-semibold">1.4 Production Scope</h3>
+                        <p>
+                            Invigilator is web application for taking online tests. It can be used for supervising
+                            and
+                            marking the exams more efficiently. There will be ways of answering questions in many
+                            ways.
+                            It will also benefit the review process of the tests.
+                        </p>
+                    </section>
+                    <section id="one-sub-five">
+                        <h3 class="pb-3 pt-5 text-xl font-semibold">1.5 References</h3>
+                        <p>
+                            Invigilators GitHub page
+                            <br>
+                            <a class="text-blue-500" href="https://github.com/IzSajid/Exam-System">Click here</a>
+                            <br>
+                            Invigilators page
+                            <br>
+                            <a class="text-blue-500" href="">Click here</a>
+                            <br>
+                            IEEE Template for System Requirement Specification Documents:
+                            <br>
+                            <a class="text-blue-500"
+                                href="https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/Conference-template-A4.docx">Click
+                                here</a>
+
+                        </p>
+                    </section>
+
+                    <!--Overall Description-->
+
+                    <section id="two">
+                        <h3 class="pb-3 pt-5 text-xl font-semibold">2. Overall Description</h3>
+                        <section id="two-sub-one">
+                            <h3 class="pb-3 pt-5 text-xl font-semibold">2.1 Product Perspective</h3>
                             <p>
-                                The purpose of this document is to present a detailed description of the open-source
-                                software Invigilator. It will explain the purpose and features of the software, the
-                                interfaces of the software, what the software will do and the constraints under which it
-                                must operate. This document is intended for users of the software and also potential
-                                developers.
+                                The Invigilator web application aims to simplify online tests, benefiting both examiners
+                                and examinees, while also ensuring the integrity of the examination process. It saves
+                                time, enhances efficiency, and provides a user-friendly experience, contributing to the
+                                effectiveness of online education.
                             </p>
                         </section>
-                        <section id="one-sub-two">
-                            <h3 class="pb-3 pt-5 text-xl font-semibold">1.2 Document Conventions</h3>
-                            <p>
-                                This Document was created based on the IEEE template for System Requirement
-                                Specification
-                                Documents.
-                            </p>
+                        <section id="two-sub-two">
+                            <h3 class="pb-3 pt-5 text-xl font-semibold">2.2 Product Functions</h3>
+                            <ul class="list-disc list-inside px-4">
+                                <li>There should be a profile for examiners</li>
+                                <li>There should be a profile for examinees</li>
+                                <li>Multiple types of answering systems</li>
+                                <li>Automatic evaluation for closed type answers</li>
+                                <li>Exams availability can be limited by the examiner</li>
+                                <li>Exam can have a set duration</li>
+                                <li>There will be review system for an evaluated exam</li>
+                                <li>Their will certain restrictions to examinees device for the duration of the exam
+                                </li>
+                                <li>The webcam should be used to keep an eye on the examinee</li>
+                                <li>Seamless switch between devices</li>
+                            </ul>
                         </section>
-                        <section id="one-sub-three">
-                            <h3 class="pb-3 pt-5 text-xl font-semibold">1.3 Intended Audience and Reading Suggestions
+                        <section id="two-sub-three">
+                            <h3 class="pb-3 pt-5 text-xl font-semibold">2.3 User Classes and Characteristics</h3>
+                            <ul class="list-disc list-inside px-4">
+                                <li>Educators/Examiners who will take the test</li>
+                                <li>Students/Examinee who will be giving exams</li>
+                            </ul>
+                        </section>
+                        <section id="two-sub-four">
+                            <h3 class="pb-3 pt-5 text-xl font-semibold">2.4 Operating Environment</h3>
+                            <p>The software will be operated on the following platforms:</p>
+                            <ul class="list-disc list-inside px-4">
+                                <li>Windows 7 or higher</li>
+                                <li>Android 7.0 (Nougat) or higher</li>
+                            </ul>
+                            <br>
+                            <p>The software will require the following hardware:</p>
+                            <ul class="list-disc list-inside px-4">
+                                <li>Working webcam</li>
+                                <li>Working microphone</li>
+                                <li>Working internet connecton</li>
+                            </ul>
+                            <br>
+                            <p>The software will also require the following software:</p>
+                            <ul class="list-disc list-inside px-4">
+                                <li>A web browser</li>
+                                <li>A supported operating system</li>
+                            </ul>
+                            <br>
+                            <p>The browser compatibility, screen resolution, keyboard and mouse, and accessibility
+                                considerations are still applicable.</p>
+                        </section>
+                        <section id="two-sub-five">
+                            <h3 class="pb-3 pt-5 text-xl font-semibold">2.5 Design and Implementation Constraints
                             </h3>
-                            <p>
-                                Educators to take online tests and students who will be attending the online tests.
-                            </p>
+                            <ul class="list-disc list-inside px-4">
+                                <li>The platform will be designed to work seamlessly on modern web browsers, including
+                                    Google Chrome and Microsoft Edge</li>
+                                <li>The user interface will be responsive, ensuring usability across various devices,
+                                    from desktops to smartphones</li>
+                                <li>Security measures, such as data encryption and secure authentication, will safeguard
+                                    exam content and user data security measures, such as data encryption and secure
+                                    authentication, will safeguard exam content and user data</li>
+                                <li>Application may need system administration permission to implement method related
+                                    with exam integrity</li>
+                                <li>Must be able to handle users’ profile on multiple devices seamlessly</li>
+                            </ul>
                         </section>
-                        <section id="one-sub-four">
-                            <h3 class="pb-3 pt-5 text-xl font-semibold">1.4 Production Scope</h3>
-                            <p>
-                                Invigilator is web application for taking online tests. It can be used for supervising
-                                and
-                                marking the exams more efficiently. There will be ways of answering questions in many
-                                ways.
-                                It will also benefit the review process of the tests.
-                            </p>
+                        <section id="two-sub-six">
+                            <h3 class="pb-3 pt-5 text-xl font-semibold">2.6 User Documentation</h3>
+                            <ul class="list-disc list-inside px-4">
+                                <li>In app instruction for users</li>
+                                <li>A FAQ section</li>
+                                <li>A helpline email</li>
+                            </ul>
                         </section>
-                        <section id="one-sub-five">
-                            <h3 class="pb-3 pt-5 text-xl font-semibold">1.5 References</h3>
+                        <section id="two-sub-seven">
+                            <h3 class="pb-3 pt-5 text-xl font-semibold">2.7 Assumptions and Dependencies</h3>
                             <p>
-                                Invigilators GitHub page
-                                <br>
-                                <a class="text-blue-500" href="https://github.com/IzSajid/Exam-System">Click here</a>
-                                <br>
-                                Invigilators page
-                                <br>
-                                <a class="text-blue-500" href="">Click here</a>
-                                <br>
-                                IEEE Template for System Requirement Specification Documents:
-                                <br>
-                                <a  class="text-blue-500"
-                                    href="https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/Conference-template-A4.docx">Click
-                                    here</a>
-
+                                Some computer protection software might interfere with the platform's functionality.
+                                Ensuring proper access permissions and compatibility with such software is necessary for
+                                uninterrupted use.
                             </p>
                         </section>
 
-                        <!--Overall Description-->
-
-                        <section id="two">
-                            <h3 class="pb-3 pt-5 text-xl font-semibold">2. Overall Description</h3>
-                            <section id="two-sub-one">
-                                <h3 class="pb-3 pt-5 text-xl font-semibold">2.1 Product Perspective</h3>
-                                <p>
-                                    The Invigilator web application aims to simplify online tests, benefiting both examiners and examinees, while also ensuring the integrity of the examination process. It saves time, enhances efficiency, and provides a user-friendly experience, contributing to the effectiveness of online education.
-                                </p>
-                            </section>
-                            <section id="two-sub-two">
-                                <h3 class="pb-3 pt-5 text-xl font-semibold">2.2 Product Functions</h3>
-                                 <ul class="list-disc list-inside px-4">
-                                    <li>There should be a profile for examiners</li>
-                                    <li>There should be a profile for examinees</li>
-                                    <li>Multiple types of answering systems</li>
-                                    <li>Automatic evaluation for closed type answers</li>
-                                    <li>Exams availability can be limited by the examiner</li>
-                                    <li>Exam can have a set duration</li>
-                                    <li>There will be review system for an evaluated exam</li>
-                                    <li>Their will certain restrictions to examinees device for the duration of the exam</li>
-                                    <li>The webcam should be used to keep an eye on the examinee</li>
-                                    <li>Seamless switch between devices</li>
-                                 </ul>
-                            </section>
-                            <section id="two-sub-three">
-                                <h3 class="pb-3 pt-5 text-xl font-semibold">2.3 User Classes and Characteristics</h3>
-                                <ul class="list-disc list-inside px-4">
-                                    <li>Educators/Examiners who will take the test</li>
-                                    <li>Students/Examinee who will be giving exams</li>
-                                </ul>
-                            </section>
-                            <section id="two-sub-four">
-                                <h3 class="pb-3 pt-5 text-xl font-semibold">2.4 Operating Environment</h3>
-                                <p>The software will be operated on the following platforms:</p>
-                                <ul class="list-disc list-inside px-4">
-                                    <li>Windows 7 or higher</li>
-                                    <li>Android 7.0 (Nougat) or higher</li>
-                                </ul>
-                                <br>
-                                <p>The software will require the following hardware:</p>
-                                <ul class="list-disc list-inside px-4">
-                                    <li>Working webcam</li>
-                                    <li>Working microphone</li>
-                                    <li>Working internet connecton</li>
-                                </ul>
-                                <br>
-                                <p>The software will also require the following software:</p>
-                                <ul class="list-disc list-inside px-4">
-                                    <li>A web browser</li>
-                                    <li>A supported operating system</li>
-                                </ul>
-                                <br>
-                                <p>The browser compatibility, screen resolution, keyboard and mouse, and accessibility considerations are still applicable.</p>
-                            </section>
-                            <section id="two-sub-five">
-                                <h3 class="pb-3 pt-5 text-xl font-semibold">2.5 Design and Implementation Constraints
-                                </h3>
+                        <!--External Interface Requirements-->
+                        <section id="three">
+                            <h3 class="pb-3 pt-5 text-xl font-semibold">3. External Interface Requirements</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
+                                earum natus vel minima quod error maxime, molestias ut. Fuga
+                                dignissimos nisi nemo necessitatibus quisquam obcaecati et
+                                reiciendis quaerat accusamus numquam.
+                            </p>
+                            <section id="three-sub-one">
+                                <h3 class="pb-3 pt-5 text-xl font-semibold">3.1 User Interfaces</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                     Labore earum natus vel minima quod error maxime, molestias ut.
@@ -150,8 +196,8 @@
                                     et reiciendis quaerat accusamus numquam.
                                 </p>
                             </section>
-                            <section id="two-sub-six">
-                                <h3 class="pb-3 pt-5 text-xl font-semibold">2.6 User Documentation</h3>
+                            <section id="three-sub-two">
+                                <h3 class="pb-3 pt-5 text-xl font-semibold">3.2 Hardware Interfaces</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                     Labore earum natus vel minima quod error maxime, molestias ut.
@@ -159,8 +205,17 @@
                                     et reiciendis quaerat accusamus numquam.
                                 </p>
                             </section>
-                            <section id="two-sub-seven">
-                                <h3 class="pb-3 pt-5 text-xl font-semibold">2.7 Assumptions and Dependencies</h3>
+                            <section id="three-sub-three">
+                                <h3 class="pb-3 pt-5 text-xl font-semibold">3.3 Software Interfaces</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Labore earum natus vel minima quod error maxime, molestias ut.
+                                    Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati
+                                    et reiciendis quaerat accusamus numquam.
+                                </p>
+                            </section>
+                            <section id="three-sub-four">
+                                <h3 class="pb-3 pt-5 text-xl font-semibold">3.4 Communications Interfaces</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                     Labore earum natus vel minima quod error maxime, molestias ut.
@@ -169,17 +224,17 @@
                                 </p>
                             </section>
 
-                            <!--External Interface Requirements-->
-                            <section id="three">
-                                <h3 class="pb-3 pt-5 text-xl font-semibold">3. External Interface Requirements</h3>
+                            <!--System Features-->
+                            <section id="four">
+                                <h3 class="pb-3 pt-5 text-xl font-semibold">4. System Features</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
                                     earum natus vel minima quod error maxime, molestias ut. Fuga
                                     dignissimos nisi nemo necessitatibus quisquam obcaecati et
                                     reiciendis quaerat accusamus numquam.
                                 </p>
-                                <section id="three-sub-one">
-                                    <h3 class="pb-3 pt-5 text-xl font-semibold">3.1 User Interfaces</h3>
+                                <section id="four-sub-one">
+                                    <h3 class="pb-3 pt-5 text-xl font-semibold">4.1 System Feature 1</h3>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                         Labore earum natus vel minima quod error maxime, molestias ut.
@@ -187,26 +242,9 @@
                                         et reiciendis quaerat accusamus numquam.
                                     </p>
                                 </section>
-                                <section id="three-sub-two">
-                                    <h3 class="pb-3 pt-5 text-xl font-semibold">3.2 Hardware Interfaces</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Labore earum natus vel minima quod error maxime, molestias ut.
-                                        Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati
-                                        et reiciendis quaerat accusamus numquam.
-                                    </p>
-                                </section>
-                                <section id="three-sub-three">
-                                    <h3 class="pb-3 pt-5 text-xl font-semibold">3.3 Software Interfaces</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Labore earum natus vel minima quod error maxime, molestias ut.
-                                        Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati
-                                        et reiciendis quaerat accusamus numquam.
-                                    </p>
-                                </section>
-                                <section id="three-sub-four">
-                                    <h3 class="pb-3 pt-5 text-xl font-semibold">3.4 Communications Interfaces</h3>
+                                <section id="four-sub-two">
+                                    <h3 class="pb-3 pt-5 text-xl font-semibold">4.2 System Feature 2 (and so on)
+                                    </h3>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                         Labore earum natus vel minima quod error maxime, molestias ut.
@@ -215,26 +253,18 @@
                                     </p>
                                 </section>
 
-                                <!--System Features-->
-                                <section id="four">
-                                    <h3 class="pb-3 pt-5 text-xl font-semibold">4. System Features</h3>
+                                <!--Other Nonfunctional Requirements-->
+                                <section id="five">
+                                    <h3 class="pb-3 pt-5 text-xl font-semibold">5. Other Nonfunctional Requirements
+                                    </h3>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
                                         earum natus vel minima quod error maxime, molestias ut. Fuga
                                         dignissimos nisi nemo necessitatibus quisquam obcaecati et
                                         reiciendis quaerat accusamus numquam.
                                     </p>
-                                    <section id="four-sub-one">
-                                        <h3 class="pb-3 pt-5 text-xl font-semibold">4.1 System Feature 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                            Labore earum natus vel minima quod error maxime, molestias ut.
-                                            Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati
-                                            et reiciendis quaerat accusamus numquam.
-                                        </p>
-                                    </section>
-                                    <section id="four-sub-two">
-                                        <h3 class="pb-3 pt-5 text-xl font-semibold">4.2 System Feature 2 (and so on)
+                                    <section id="five-sub-one">
+                                        <h3 class="pb-3 pt-5 text-xl font-semibold">5.1 Performance Requirements
                                         </h3>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -243,10 +273,87 @@
                                             et reiciendis quaerat accusamus numquam.
                                         </p>
                                     </section>
+                                    <section id="five-sub-two">
+                                        <h3 class="pb-3 pt-5 text-xl font-semibold">5.2 Safety Requirements</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Labore earum natus vel minima quod error maxime, molestias ut.
+                                            Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati
+                                            et reiciendis quaerat accusamus numquam.
+                                        </p>
+                                    </section>
+                                    <section id="five-sub-three">
+                                        <h3 class="pb-3 pt-5 text-xl font-semibold">5.3 Security Requirements</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Labore earum natus vel minima quod error maxime, molestias ut.
+                                            Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati
+                                            et reiciendis quaerat accusamus numquam.
+                                        </p>
+                                    </section>
+                                    <section id="five-sub-four">
+                                        <h3 class="pb-3 pt-5 text-xl font-semibold">5.4 Software Quality Attributes
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Labore earum natus vel minima quod error maxime, molestias ut.
+                                            Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati
+                                            et reiciendis quaerat accusamus numquam.
+                                        </p>
+                                    </section>
+                                    <section id="five-sub-five">
+                                        <h3 class="pb-3 pt-5 text-xl font-semibold">5.5 Business Rules</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Labore earum natus vel minima quod error maxime, molestias ut.
+                                            Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati
+                                            et reiciendis quaerat accusamus numquam.
+                                        </p>
+                                    </section>
 
-                                    <!--Other Nonfunctional Requirements-->
-                                    <section id="five">
-                                        <h3 class="pb-3 pt-5 text-xl font-semibold">5. Other Nonfunctional Requirements
+                                    <!--Other Requirements-->
+                                    <section id="six">
+                                        <h3 class="pb-3 pt-5 text-xl font-semibold">6. Other Requirements</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
+                                            earum natus vel minima quod error maxime, molestias ut. Fuga
+                                            dignissimos nisi nemo necessitatibus quisquam obcaecati et
+                                            reiciendis quaerat accusamus numquam.
+                                        </p>
+                                    </section>
+                                    <section id="Appendix A">
+                                        <h3 class="pb-3 pt-5 text-xl font-semibold">Appendix A: Glossary</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
+                                            earum natus vel minima quod error maxime, molestias ut. Fuga
+                                            dignissimos nisi nemo necessitatibus quisquam obcaecati et
+                                            reiciendis quaerat accusamus numquam.
+                                        </p>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
+                                            earum natus vel minima quod error maxime, molestias ut. Fuga
+                                            dignissimos nisi nemo necessitatibus quisquam obcaecati et
+                                            reiciendis quaerat accusamus numquam.
+                                        </p>
+                                    </section>
+                                    <section id="Appendix B">
+                                        <h3 class="pb-3 pt-5 text-xl font-semibold">Appendix B: Analysis Models</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
+                                            earum natus vel minima quod error maxime, molestias ut. Fuga
+                                            dignissimos nisi nemo necessitatibus quisquam obcaecati et
+                                            reiciendis quaerat accusamus numquam.
+                                        </p>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
+                                            earum natus vel minima quod error maxime, molestias ut. Fuga
+                                            dignissimos nisi nemo necessitatibus quisquam obcaecati et
+                                            reiciendis quaerat accusamus numquam.
+                                        </p>
+                                    </section>
+                                    <section id="Appendix C">
+                                        <h3 class="pb-3 pt-5 text-xl font-semibold">Appendix C: To Be Determined
+                                            List
                                         </h3>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
@@ -254,329 +361,231 @@
                                             dignissimos nisi nemo necessitatibus quisquam obcaecati et
                                             reiciendis quaerat accusamus numquam.
                                         </p>
-                                        <section id="five-sub-one">
-                                            <h3 class="pb-3 pt-5 text-xl font-semibold">5.1 Performance Requirements
-                                            </h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                Labore earum natus vel minima quod error maxime, molestias ut.
-                                                Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati
-                                                et reiciendis quaerat accusamus numquam.
-                                            </p>
-                                        </section>
-                                        <section id="five-sub-two">
-                                            <h3 class="pb-3 pt-5 text-xl font-semibold">5.2 Safety Requirements</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                Labore earum natus vel minima quod error maxime, molestias ut.
-                                                Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati
-                                                et reiciendis quaerat accusamus numquam.
-                                            </p>
-                                        </section>
-                                        <section id="five-sub-three">
-                                            <h3 class="pb-3 pt-5 text-xl font-semibold">5.3 Security Requirements</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                Labore earum natus vel minima quod error maxime, molestias ut.
-                                                Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati
-                                                et reiciendis quaerat accusamus numquam.
-                                            </p>
-                                        </section>
-                                        <section id="five-sub-four">
-                                            <h3 class="pb-3 pt-5 text-xl font-semibold">5.4 Software Quality Attributes
-                                            </h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                Labore earum natus vel minima quod error maxime, molestias ut.
-                                                Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati
-                                                et reiciendis quaerat accusamus numquam.
-                                            </p>
-                                        </section>
-                                        <section id="five-sub-five">
-                                            <h3 class="pb-3 pt-5 text-xl font-semibold">5.5 Business Rules</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                Labore earum natus vel minima quod error maxime, molestias ut.
-                                                Fuga dignissimos nisi nemo necessitatibus quisquam obcaecati
-                                                et reiciendis quaerat accusamus numquam.
-                                            </p>
-                                        </section>
-
-                                        <!--Other Requirements-->
-                                        <section id="six">
-                                            <h3 class="pb-3 pt-5 text-xl font-semibold">6. Other Requirements</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
-                                                earum natus vel minima quod error maxime, molestias ut. Fuga
-                                                dignissimos nisi nemo necessitatibus quisquam obcaecati et
-                                                reiciendis quaerat accusamus numquam.
-                                            </p>
-                                        </section>
-                                        <section id="Appendix A">
-                                            <h3 class="pb-3 pt-5 text-xl font-semibold">Appendix A: Glossary</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
-                                                earum natus vel minima quod error maxime, molestias ut. Fuga
-                                                dignissimos nisi nemo necessitatibus quisquam obcaecati et
-                                                reiciendis quaerat accusamus numquam.
-                                            </p>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
-                                                earum natus vel minima quod error maxime, molestias ut. Fuga
-                                                dignissimos nisi nemo necessitatibus quisquam obcaecati et
-                                                reiciendis quaerat accusamus numquam.
-                                            </p>
-                                        </section>
-                                        <section id="Appendix B">
-                                            <h3 class="pb-3 pt-5 text-xl font-semibold">Appendix B: Analysis Models</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
-                                                earum natus vel minima quod error maxime, molestias ut. Fuga
-                                                dignissimos nisi nemo necessitatibus quisquam obcaecati et
-                                                reiciendis quaerat accusamus numquam.
-                                            </p>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
-                                                earum natus vel minima quod error maxime, molestias ut. Fuga
-                                                dignissimos nisi nemo necessitatibus quisquam obcaecati et
-                                                reiciendis quaerat accusamus numquam.
-                                            </p>
-                                        </section>
-                                        <section id="Appendix C">
-                                            <h3 class="pb-3 pt-5 text-xl font-semibold">Appendix C: To Be Determined
-                                                List
-                                            </h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
-                                                earum natus vel minima quod error maxime, molestias ut. Fuga
-                                                dignissimos nisi nemo necessitatibus quisquam obcaecati et
-                                                reiciendis quaerat accusamus numquam.
-                                            </p>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
-                                                earum natus vel minima quod error maxime, molestias ut. Fuga
-                                                dignissimos nisi nemo necessitatibus quisquam obcaecati et
-                                                reiciendis quaerat accusamus numquam.
-                                            </p>
-                                        </section>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
+                                            earum natus vel minima quod error maxime, molestias ut. Fuga
+                                            dignissimos nisi nemo necessitatibus quisquam obcaecati et
+                                            reiciendis quaerat accusamus numquam.
+                                        </p>
+                                    </section>
 
 
-                </div>
             </div>
-
-                <div>
-                <!-- Scrollspy -->
-                <div id="scrollspy1" class="sticky-top pt-3 pl-3 text-sm">
-                    <ul data-te-nav-list-ref>
-                        <!--Introduction-->
-                        <li class="py-1">
-                            <a data-te-nav-link-ref data-te-nav-link-active
-                                class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                href="#one">1. Intrduction</a>
-                            <ul data-te-nav-list-ref class="pl-3">
-                                <li class="py-1">
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#one-sub-one">1.1 Purspose</a>
-                                </li>
-                                <li>
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#one-sub-two">1.2 Document Conventions</a>
-                                </li>
-                                <li>
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#one-sub-three">1.3 Intended Audience and Reading Suggesions</a>
-                                </li>
-                                <li>
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#one-sub-four">1.4 Product Scope</a>
-                                </li>
-                                <li>
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#one-sub-five">1.5 References</a>
-                                </li>
-
-                            </ul>
-
-                            <!--Overall Description-->
-                        <li class="py-1">
-                            <a data-te-nav-link-ref data-te-nav-link-active
-                                class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                href="#two">2. Overall Description</a>
-                            <ul data-te-nav-list-ref class="pl-3">
-                                <li class="py-1">
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#two-sub-one">2.1 Product Perspective</a>
-                                </li>
-                                <li>
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#two-sub-two">2.2 Product Functions</a>
-                                </li>
-                                <li>
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#two-sub-three">2.3 User Classes and Characteristics</a>
-                                </li>
-                                <li>
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#two-sub-four">2.4 Operating Environment</a>
-                                </li>
-                                <li>
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#two-sub-five">2.5 Design and Implementation Constraints</a>
-                                </li>
-                                <li>
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#two-sub-six">2.6 User Documentation</a>
-                                </li>
-                                <li>
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#two-sub-seven">2.7 Assumptions and Dependencies</a>
-                                </li>
-                            </ul>
-
-                            <!--External Interface Requirements-->
-                        <li class="py-1">
-                            <a data-te-nav-link-ref data-te-nav-link-active
-                                class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                href="#three">3. External Interface Requirements</a>
-                            <ul data-te-nav-list-ref class="pl-3">
-                                <li class="py-1">
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#three-sub-one">3.1 User Interfaces</a>
-                                </li>
-                                <li>
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#three-sub-two">3.2 Hardware Interfaces</a>
-                                </li>
-                                <li>
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#three-sub-three">3.3 Software Interfaces</a>
-                                </li>
-                                <li>
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#three-sub-four">3.4 Communications Interfaces</a>
-                                </li>
-
-                            </ul>
-                            <!--External Interface Requirements-->
-                        <li class="py-1">
-                            <a data-te-nav-link-ref data-te-nav-link-active
-                                class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                href="#four">4. System Features</a>
-                            <ul data-te-nav-list-ref class="pl-3">
-                                <li class="py-1">
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#four-sub-one">4.1 System Feature 1</a>
-                                </li>
-                                <li>
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#four-sub-two">4.2 System Feature 2</a>
-                                </li>
-
-
-                            </ul>
-                            <!--Other Nonfunctional Requirements-->
-                        <li class="py-1">
-                            <a data-te-nav-link-ref data-te-nav-link-active
-                                class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                href="#five">5. Other Nonfunctional Requirements</a>
-                            <ul data-te-nav-list-ref class="pl-3">
-                                <li class="py-1">
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#five-sub-one">5.1 Performance Requirements</a>
-                                </li>
-                                <li>
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#five-sub-two">5.2 Safety Requirements</a>
-                                </li>
-                                <li>
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#five-sub-three">5.3 Security Requirements</a>
-                                </li>
-                                <li>
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#five-sub-four">5.4 Software Quality Attributes</a>
-                                </li>
-                                <li>
-                                    <a data-te-nav-link-ref
-                                        class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                        href="#five-sub-five">5.5 Business Rules</a>
-                                </li>
-
-                            </ul>
-                            <!--Other Requirements-->
-                        <li class="py-1">
-                            <a data-te-nav-link-ref data-te-nav-link-active
-                                class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                href="#six">6. Other Requirements</a>
-                        </li>
-                        <li class="py-1">
-                            <a data-te-nav-link-ref data-te-nav-link-active
-                                class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                href="#Appendix A">Appendix A: Glossary</a>
-                        </li>
-                        <li class="py-1">
-                            <a data-te-nav-link-ref data-te-nav-link-active
-                                class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                href="#Appendix B">Appendix B: Analysis Models</a>
-                        </li>
-                        <li class="py-1">
-                            <a data-te-nav-link-ref data-te-nav-link-active
-                                class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                                href="#Appendix C">Appendix C: To Be Determined List</a>
-                        </li>
-
-
-                    </ul>
-                    <!--List end-->
-
-                </div>
-                <!-- Scrollspy -->
-            </div>
-
         </div>
-    
+
+        <div>
+            <!-- Scrollspy -->
+            <div id="scrollspy1" class="sticky-top py-3 pl-3 text-sm">
+                <ul data-te-nav-list-ref>
+                    <!--Introduction-->
+                    <li class="py-1">
+                        <a data-te-nav-link-ref data-te-nav-link-active
+                            class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                            href="#one">1. Intrduction</a>
+                        <ul data-te-nav-list-ref class="pl-3">
+                            <li class="py-1">
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#one-sub-one">1.1 Purspose</a>
+                            </li>
+                            <li>
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#one-sub-two">1.2 Document Conventions</a>
+                            </li>
+                            <li>
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#one-sub-three">1.3 Intended Audience and Reading Suggesions</a>
+                            </li>
+                            <li>
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#one-sub-four">1.4 Product Scope</a>
+                            </li>
+                            <li>
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#one-sub-five">1.5 References</a>
+                            </li>
+
+                        </ul>
+
+                        <!--Overall Description-->
+                    <li class="py-1">
+                        <a data-te-nav-link-ref data-te-nav-link-active
+                            class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                            href="#two">2. Overall Description</a>
+                        <ul data-te-nav-list-ref class="pl-3">
+                            <li class="py-1">
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#two-sub-one">2.1 Product Perspective</a>
+                            </li>
+                            <li>
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#two-sub-two">2.2 Product Functions</a>
+                            </li>
+                            <li>
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#two-sub-three">2.3 User Classes and Characteristics</a>
+                            </li>
+                            <li>
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#two-sub-four">2.4 Operating Environment</a>
+                            </li>
+                            <li>
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#two-sub-five">2.5 Design and Implementation Constraints</a>
+                            </li>
+                            <li>
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#two-sub-six">2.6 User Documentation</a>
+                            </li>
+                            <li>
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#two-sub-seven">2.7 Assumptions and Dependencies</a>
+                            </li>
+                        </ul>
+
+                        <!--External Interface Requirements-->
+                    <li class="py-1">
+                        <a data-te-nav-link-ref data-te-nav-link-active
+                            class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                            href="#three">3. External Interface Requirements</a>
+                        <ul data-te-nav-list-ref class="pl-3">
+                            <li class="py-1">
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#three-sub-one">3.1 User Interfaces</a>
+                            </li>
+                            <li>
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#three-sub-two">3.2 Hardware Interfaces</a>
+                            </li>
+                            <li>
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#three-sub-three">3.3 Software Interfaces</a>
+                            </li>
+                            <li>
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#three-sub-four">3.4 Communications Interfaces</a>
+                            </li>
+
+                        </ul>
+                        <!--External Interface Requirements-->
+                    <li class="py-1">
+                        <a data-te-nav-link-ref data-te-nav-link-active
+                            class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                            href="#four">4. System Features</a>
+                        <ul data-te-nav-list-ref class="pl-3">
+                            <li class="py-1">
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#four-sub-one">4.1 System Feature 1</a>
+                            </li>
+                            <li>
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#four-sub-two">4.2 System Feature 2</a>
+                            </li>
+
+
+                        </ul>
+                        <!--Other Nonfunctional Requirements-->
+                    <li class="py-1">
+                        <a data-te-nav-link-ref data-te-nav-link-active
+                            class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                            href="#five">5. Other Nonfunctional Requirements</a>
+                        <ul data-te-nav-list-ref class="pl-3">
+                            <li class="py-1">
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#five-sub-one">5.1 Performance Requirements</a>
+                            </li>
+                            <li>
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#five-sub-two">5.2 Safety Requirements</a>
+                            </li>
+                            <li>
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#five-sub-three">5.3 Security Requirements</a>
+                            </li>
+                            <li>
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#five-sub-four">5.4 Software Quality Attributes</a>
+                            </li>
+                            <li>
+                                <a data-te-nav-link-ref
+                                    class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                                    href="#five-sub-five">5.5 Business Rules</a>
+                            </li>
+
+                        </ul>
+                        <!--Other Requirements-->
+                    <li class="py-1">
+                        <a data-te-nav-link-ref data-te-nav-link-active
+                            class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                            href="#six">6. Other Requirements</a>
+                    </li>
+                    <li class="py-1">
+                        <a data-te-nav-link-ref data-te-nav-link-active
+                            class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                            href="#Appendix A">Appendix A: Glossary</a>
+                    </li>
+                    <li class="py-1">
+                        <a data-te-nav-link-ref data-te-nav-link-active
+                            class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                            href="#Appendix B">Appendix B: Analysis Models</a>
+                    </li>
+                    <li class="py-1">
+                        <a data-te-nav-link-ref data-te-nav-link-active
+                            class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
+                            href="#Appendix C">Appendix C: To Be Determined List</a>
+                    </li>
+
+
+                </ul>
+                <!--List end-->
+
+            </div>
+            <!-- Scrollspy -->
+        </div>
+
+    </div>
+
 </body>
-    
-    <!--pdf-->
-    <script>
-        document.getElementById("download-pdf").addEventListener("click", async function () {
-            const element = document.body; // The element you want to convert to PDF
-            
-            const opt = {
-                margin: 10,
-                filename: "downloaded-webpage.pdf",
-                image: { type: "jpeg", quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-            };
+
+<!--pdf-->
+<script>
+    document.getElementById("download-pdf").addEventListener("click", async function () {
+        const element = document.body; // The element you want to convert to PDF
+
+        const opt = {
+            margin: 10,
+            filename: "downloaded-webpage.pdf",
+            image: { type: "jpeg", quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+        };
 
 
-            // Use html2pdf.js to generate the PDF
-            html2pdf().from(element).set(opt).save();
-        });
-    </script>
+        // Use html2pdf.js to generate the PDF
+        html2pdf().from(element).set(opt).save();
+    });
+</script>
 
 
 
