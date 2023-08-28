@@ -5,6 +5,7 @@ import Signup from './Authentication/Signup';
 import Home from './Home/Home';
 import Header from './Header-Footer/Header';
 import Banner from './Home/Banner/Banner';
+import Footer from './Header-Footer/Footer/Footer';
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
     <Route path='/login' element={<Login></Login>}></Route>
     <Route path='/banner' element={<Banner></Banner>}></Route>
     <Route></Route>
-
    </Routes>
+   <Footer></Footer>
+
     </div>
   );
 }

@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 const Header = () => {
   const navigate=useNavigate();
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary " bg="dark" data-bs-theme="dark">
+    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary h-20 " bg="dark" data-bs-theme="dark">
     <Container>
       <Navbar.Brand href="/">Virtual Hashor</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
