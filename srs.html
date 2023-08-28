@@ -12,17 +12,14 @@
 
 
 
-
-
-
 <body>
     <!-- Header -->
 
-    <section class="mt-0 bg-red-500">
+    <section class="fixed top-0 left-0 w-full bg-red-500 p-4 z-10">
         <h1 class="text-4xl font-mono font-extrabold text-white text-center p-8">Invigilator</h1>
     </section>
     <!-- Main -->
-    <div class="grid grid-cols-6">
+    <div class="grid grid-cols-6 pt-36">
         <!-- Main Content -->
         <div class="col-span-5 px-8">
             <div data-te-spy="scroll" data-te-target="#scrollspy1" data-te-offset="200"
@@ -148,25 +145,24 @@
                         <section id="two-sub-five">
                             <h3 class="pb-3 pt-5 text-xl font-semibold">2.5 Design and Implementation Constraints
                             </h3>
-                            <ul class="list-disc list-outside px-4">
+                            <ul class="list-disc list-inside px-4">
                                 <li>The platform will be designed to work seamlessly on modern web browsers, including
                                     Google Chrome and Microsoft Edge</li>
                                 <li>The user interface will be responsive, ensuring usability across various devices,
                                     from desktops to smartphones</li>
                                 <li>Security measures, such as data encryption and secure authentication, will safeguard
-                                    exam content and user data security measures, such as data encryption and
-                                    secure authentication, will safeguard exam content and user data</li>
+                                    exam content and user data security measures, such as data encryption and secure
+                                    authentication, will safeguard exam content and user data</li>
                                 <li>Application may need system administration permission to implement method related
                                     with exam integrity</li>
-                                <li>Must be able to handle users profile on multiple devices seamlessly</li>
-
+                                <li>Must be able to handle users’ profile on multiple devices seamlessly</li>
                             </ul>
                         </section>
                         <section id="two-sub-six">
                             <h3 class="pb-3 pt-5 text-xl font-semibold">2.6 User Documentation</h3>
-                            <ul class="list-disc list-outside px-4">
-                                <li>In-app instruction for users</li>
-                                <li>TA FAQ section</li>
+                            <ul class="list-disc list-inside px-4">
+                                <li>In app instruction for users</li>
+                                <li>A FAQ section</li>
                                 <li>A helpline email</li>
                             </ul>
                         </section>
@@ -378,12 +374,14 @@
                                         <h3 class="pb-3 pt-5 text-base font-semibold">5.1.1 Response Time</h3>
 
                                         <p>
-                                            <strong>Page Loading:</strong> The platform should load pages and exam content within 2
+                                            <strong>Page Loading:</strong> The platform should load pages and exam
+                                            content within 2
                                             seconds on average, with a maximum loading time of 5 seconds.
                                         </p>
                                         <br>
                                         <p>
-                                            <strong> Question Navigation:</strong> Moving between questions within an exam should take no
+                                            <strong> Question Navigation:</strong> Moving between questions within an
+                                            exam should take no
                                             more than 1 second.
                                         </p>
 
@@ -421,7 +419,8 @@
                                     <section id="five-sub-three">
                                         <h3 class="pb-3 pt-5 text-xl font-semibold">5.3 Security Requirements</h3>
                                         <p>
-                                            Some supervising features may require administrator access from the examinee device for the purpose of supervising.
+                                            Some supervising features may require administrator access from the examinee
+                                            device for the purpose of supervising.
                                         </p>
                                     </section>
                                     <section id="five-sub-four">
@@ -431,7 +430,7 @@
                                             Invigilator will be easy to use and will only require basic computer skills.
                                         </p>
                                     </section>
-                                    
+
 
                                     <!--Other Requirements-->
                                     <section id="six">
@@ -443,30 +442,45 @@
 
                                     <section id="Appendix A">
                                         <h3 class="pb-3 pt-5 text-xl font-semibold">Appendix A: Glossary</h3>
-                                   <p> <strong>API:</strong> Abbreviation for Application Programming Interface. A set of rules and protocols that allows different software applications to communicate and interact with each other.</p>
-                                   <br>
-                                   <p><strong>Authentication:</strong> The process of verifying the identity of a user, typically through the use of a username and password or other authentication methods.</p>
-                                   <br>
-                                   <p><strong>Concurrency:</strong>The ability of a system to handle multiple tasks or processes simultaneously.</p>
-                                   <br>
-                                   <p><strong>Encryption:</strong>The process of converting data into a code to prevent unauthorized access.</p>
-                                   <br>
-                                   <p><strong>HTTP:</strong>Abbreviation for Hypertext Transfer Protocol. A protocol used for transferring data over the internet.
-                                   </p>
-                                   <br>
-                                   <p><strong>HTTPS:</strong>Abbreviation for Hypertext Transfer Protocol Secure. A secure version of HTTP that uses encryption to protect data.</p>
-                                   <br>
-                                   <p><strong>Multi-factor Authentication (MFA): </strong> A security process that requires users to provide multiple forms of identification before accessing a system.</p>
-                                   <br>
-                                   <p><strong>Responsive Design:</strong>Design approach that ensures a consistent user experience across different devices and screen sizes.</p>
-                                   <br>
-                                   <p><strong>Role-Based Access Control:</strong>A method of restricting access to system resources based on the roles of individual users.</p>
-                                   <br>
-                                   <p><strong>SSL/TLS:</strong>Abbreviations for Secure Sockets Layer and Transport Layer Security. Protocols used to establish secure and encrypted connections between a user's device and a server.</p>
-                                   <br>
-                                   <p><strong>Web Browser:</strong>Software used to access and view websites on the internet.</p>
-                                   <br>
-                                   
+                                        <p> <strong>API:</strong> Abbreviation for Application Programming Interface. A
+                                            set of rules and protocols that allows different software applications to
+                                            communicate and interact with each other.</p>
+                                        <br>
+                                        <p><strong>Authentication:</strong> The process of verifying the identity of a
+                                            user, typically through the use of a username and password or other
+                                            authentication methods.</p>
+                                        <br>
+                                        <p><strong>Concurrency:</strong>The ability of a system to handle multiple tasks
+                                            or processes simultaneously.</p>
+                                        <br>
+                                        <p><strong>Encryption:</strong>The process of converting data into a code to
+                                            prevent unauthorized access.</p>
+                                        <br>
+                                        <p><strong>HTTP:</strong>Abbreviation for Hypertext Transfer Protocol. A
+                                            protocol used for transferring data over the internet.
+                                        </p>
+                                        <br>
+                                        <p><strong>HTTPS:</strong>Abbreviation for Hypertext Transfer Protocol Secure. A
+                                            secure version of HTTP that uses encryption to protect data.</p>
+                                        <br>
+                                        <p><strong>Multi-factor Authentication (MFA): </strong> A security process that
+                                            requires users to provide multiple forms of identification before accessing
+                                            a system.</p>
+                                        <br>
+                                        <p><strong>Responsive Design:</strong>Design approach that ensures a consistent
+                                            user experience across different devices and screen sizes.</p>
+                                        <br>
+                                        <p><strong>Role-Based Access Control:</strong>A method of restricting access to
+                                            system resources based on the roles of individual users.</p>
+                                        <br>
+                                        <p><strong>SSL/TLS:</strong>Abbreviations for Secure Sockets Layer and Transport
+                                            Layer Security. Protocols used to establish secure and encrypted connections
+                                            between a user's device and a server.</p>
+                                        <br>
+                                        <p><strong>Web Browser:</strong>Software used to access and view websites on the
+                                            internet.</p>
+                                        <br>
+
                                     </section>
                                     <section id="Appendix B">
                                         <h3 class="pb-3 pt-5 text-xl font-semibold">Appendix B: Analysis Models</h3>
@@ -496,7 +510,7 @@
 
         <div>
             <!-- Scrollspy -->
-            <div id="scrollspy1" class="sticky-top pt-3 pl-3 text-sm">
+            <div id="scrollspy1" class="sticky-top py-3 pl-3 text-sm">
                 <ul data-te-nav-list-ref>
                     <!--Introduction-->
                     <li class="py-1">
@@ -648,7 +662,7 @@
                                     class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
                                     href="#five-sub-four">5.4 Software Quality Attributes</a>
                             </li>
-                            
+
 
                         </ul>
                         <!--Other Requirements-->
