@@ -14,9 +14,16 @@
 
 <body>
     <!-- Header -->
-    <section class="top-0 left-0 w-full bg-red-500 p-4 z-10">
+</body>
+ <container class="grid grid-cols-8">
+    <section class="col-span-7 top-0 left-0 w-full bg-red-500 p-4 z-10">
         <h1 class="text-4xl font-mono font-extrabold text-white text-center p-8">Invigilator</h1>
     </section>
+    <section class="col-span-1 top-0 right-0 w-full bg-red-500 p-4 z-10">
+        <button class="text-2xl font-mono font-extrabold text-white text-center border-4 p-2 hover:bg-red-200 active:bg-white-700 focus:outline-none focus:ring focus:ring-white-300" onclick="generatePDF()">
+            Dowload PDF</button>
+    </section>
+ </container>   
     <!-- Main -->
     <div class="grid grid-cols-6 pt-8">
         <!-- Main Content -->
@@ -180,13 +187,16 @@
 
                     <section id="three-sub-one">
                         <h3 class="pb-3 pt-5 text-xl font-semibold">3.1 User Interfaces</h3>
-                        <p>
+                        <p class="text-center text-xl">
                             Some of the screens of the platform are as follows:
                         </p>
                         <img src="page images/Screenshot (127).png" alt="">
                         <img src="page images/Screenshot (128).png" alt="">
                         <img src="page images/Screenshot (129).png" alt="">
                         <img src="page images/Screenshot (130).png" alt="">
+                        <p class="text-center text-xl">
+                            More screens will be added as the development progresses.
+                        </p>
                     </section>
                     <section id="three-sub-two">
                         <h3 class="pb-3 pt-5 text-xl font-semibold">3.2 Hardware Interfaces</h3>
@@ -510,6 +520,7 @@
                         List
                     </h3>
                     <li>Software Scalability</li>
+                    <li>Dynmic Pages Design</li>
                 </section>
 
 
@@ -518,7 +529,7 @@
 
         <div>
             <!-- Scrollspy -->
-            <div id="scrollspy1" class="sticky-top py-3 pl-3 text-sm">
+            <div id="scrollspy1" class="sticky-top py-3 pl-3 text-sm h-screen relative overflow-auto ">
                 <ul data-te-nav-list-ref>
                     <!--Introduction-->
                     <li class="py-1">
@@ -732,28 +743,18 @@
 
     </div>
 </body>
+<footer class="bg-red-500 text-white mt-2 py-6">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2023 Invigilator Exam Platform. All rights reserved.</p>
+        <p class="mt-2">Designed with <span class="text-white-500">&hearts;</span></p>
+    </div>
+</footer>
 
 
 <!--Scripts Scroll spy-->
 
 <!--pdf-->
-<script>
-    document.getElementById("download-pdf").addEventListener("click", async function () {
-        const element = document.body; // The element you want to convert to PDF
 
-        const opt = {
-            margin: 10,
-            filename: "downloaded-webpage.pdf",
-            image: { type: "jpeg", quality: 0.98 },
-            html2canvas: { scale: 2 },
-            jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-        };
-
-
-        // Use html2pdf.js to generate the PDF
-        html2pdf().from(element).set(opt).save();
-    });
-</script>
 
 
 
