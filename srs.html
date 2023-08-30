@@ -7,27 +7,27 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
 </head>
 
 
 
 <body>
     <!-- Header -->
-</body>
- <container class="grid grid-cols-8">
-    <section class="col-span-7 top-0 left-0 w-full bg-red-500 p-4 z-10">
-        <h1 class="text-4xl font-mono font-extrabold text-white text-center p-8">Invigilator</h1>
-    </section>
-    <section class="col-span-1 top-0 right-0 w-full bg-red-500 p-4 z-10">
-        <button class="text-2xl font-mono font-extrabold text-white text-center border-4 p-2 hover:bg-red-200 active:bg-white-700 focus:outline-none focus:ring focus:ring-white-300" onclick="generatePDF()">
-            Dowload PDF</button>
-    </section>
- </container>   
+    <container class="grid grid-cols-8">
+        <section class="col-span-7 top-0 left-0 w-full bg-red-500 p-4 z-10">
+            <h1 class="text-4xl font-mono font-extrabold text-white text-center p-8">Invigilator</h1>
+        </section>
+        <section class="col-span-1 top-0 right-0 w-full bg-red-500 p-4 z-10">
+            <button id="print-btn"
+                class="text-2xl font-mono font-extrabold text-white text-center border-4 p-2 hover:bg-red-200 active:bg-white-700 focus:outline-none focus:ring focus:ring-white-300">
+                Dowload PDF
+            </button>
+        </section>
+    </container>
     <!-- Main -->
     <div class="grid grid-cols-6 pt-8">
         <!-- Main Content -->
-        <div class="col-span-5 px-8">
+        <div id="main_content" class="col-span-5 px-8">
             <div data-te-spy="scroll" data-te-target="#scrollspy1" data-te-offset="200"
                 class="flex flex-col h-screen relative overflow-auto">
                 <!--Introduction-->
@@ -530,12 +530,14 @@
         <div>
             <!-- Scrollspy -->
             <div id="scrollspy1" class="sticky-top py-3 pl-3 text-sm h-screen relative overflow-auto ">
+                <h3 class="pb-3 pt-5 text-xl font-semibold">Table of Contents</h3>
                 <ul data-te-nav-list-ref>
                     <!--Introduction-->
                     <li class="py-1">
                         <a data-te-nav-link-ref data-te-nav-link-active
                             class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                            href="#one">1. Introduction</a>
+                            href="#one">1.
+                            Introduction</a>
                         <ul data-te-nav-list-ref class="pl-3">
                             <li class="py-1">
                                 <a data-te-nav-link-ref
@@ -569,7 +571,8 @@
                     <li class="py-1">
                         <a data-te-nav-link-ref data-te-nav-link-active
                             class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                            href="#two">2. Overall Description</a>
+                            href="#two">2.
+                            Overall Description</a>
                         <ul data-te-nav-list-ref class="pl-3">
                             <li class="py-1">
                                 <a data-te-nav-link-ref
@@ -612,7 +615,8 @@
                     <li class="py-1">
                         <a data-te-nav-link-ref data-te-nav-link-active
                             class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                            href="#three">3. External Interface Requirements</a>
+                            href="#three">3.
+                            External Interface Requirements</a>
                         <ul data-te-nav-list-ref class="pl-3">
                             <li class="py-1">
                                 <a data-te-nav-link-ref
@@ -640,7 +644,8 @@
                     <li class="py-1">
                         <a data-te-nav-link-ref data-te-nav-link-active
                             class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                            href="#four">4. System Features</a>
+                            href="#four">4.
+                            System Features</a>
                         <ul data-te-nav-list-ref class="pl-3">
                             <li class="py-1">
                                 <a data-te-nav-link-ref
@@ -693,7 +698,8 @@
                     <li class="py-1">
                         <a data-te-nav-link-ref data-te-nav-link-active
                             class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                            href="#five">5. Other Nonfunctional Requirements</a>
+                            href="#five">5.
+                            Other Nonfunctional Requirements</a>
                         <ul data-te-nav-list-ref class="pl-3">
                             <li class="py-1">
                                 <a data-te-nav-link-ref
@@ -722,7 +728,8 @@
                     <li class="py-1">
                         <a data-te-nav-link-ref data-te-nav-link-active
                             class="bg-transparent px-[5px] text-neutral-600 shadow-none dark:text-red-500"
-                            href="#six">6. Other Requirements</a>
+                            href="#six">6.
+                            Other Requirements</a>
                     </li>
                     <li class="py-1">
                         <a data-te-nav-link-ref data-te-nav-link-active
@@ -736,12 +743,60 @@
                     </li>
                 </ul>
                 <!--List end-->
-
             </div>
             <!-- Scrollspy -->
         </div>
 
     </div>
+    <!--Scripts-->
+    <script>
+        function getElementsAndSaveToPHP(ids) {
+            //Get the elements 
+            const scrollspy = document.getElementById('scrollspy1');
+
+            //Get inner text
+            const scrollspy_text = scrollspy.innerText;
+
+            //Save to PHP
+            $.ajax({
+                type: "POST",
+                url: "download.php",
+                data: {
+                    main_content_text: main_content_text,
+                    scrollspy_text: scrollspy_text
+                },
+                success: function (data) {
+                    console.log(data);
+                }
+            });
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="print.js"></script>
+   
+   <!--New try-->
+   <script>
+        document.getElementById('print-btn').addEventListener('click', function () {
+            const content = document.getElementById('main_content').innerHTML;
+
+            // Send content to PHP script
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'download.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Handle the response, e.g., show a link to the generated PDF
+                }
+            };
+            xhr.send('main_content=' + encodeURIComponent(content));
+        });
+
+
+    </script>
+
+
+
 </body>
 <footer class="bg-red-500 text-white mt-2 py-6">
     <div class="container mx-auto text-center">
@@ -749,15 +804,5 @@
         <p class="mt-2">Designed with <span class="text-white-500">&hearts;</span></p>
     </div>
 </footer>
-
-
-<!--Scripts Scroll spy-->
-
-<!--pdf-->
-
-
-
-
-
 
 </html>
