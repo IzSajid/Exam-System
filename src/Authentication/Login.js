@@ -3,6 +3,7 @@ import { Button, Card, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
+import Forgetpass from './Forgetpass';
 
 const Login = () => {
  const [
@@ -62,7 +63,7 @@ const handleSubmit=async(event)=>{
         </Form>
         <p>
           Forget Password? 
-          <Link> click here
+          <Link to='/forgetpass'> click here
           </Link>
         </p>
       </div>
