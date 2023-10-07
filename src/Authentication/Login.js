@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Card, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
 
 const Login = () => {
@@ -11,12 +11,14 @@ const Login = () => {
     loading,
     error,
   ] = useSignInWithEmailAndPassword(auth);
+  const navigate=useNavigate()
 
 const handleSubmit=async(event)=>{
   const email=event.target.email.value;
   const password=event.target.password.value;
   event.preventDefault();
   await signInWithEmailAndPassword(email,password);
+  navigate('/home');
 
 }
 

@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary h-20 " bg="dark" data-bs-theme="dark">
     <Container>
-      <Navbar.Brand href="/">Virtual Hashor</Navbar.Brand>
+      <Navbar.Brand href="/">Invigilator</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
