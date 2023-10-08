@@ -1,12 +1,24 @@
 import React from 'react';
-import { Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
+import { Container, Dropdown, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Avatar } from '@mui/material';
+import { Avatar, Box, Divider, IconButton, ListItemIcon, Menu, MenuItem, Tooltip, Typography } from '@mui/material';
+import PersonAdd from '@mui/icons-material/PersonAdd';
+import Settings from '@mui/icons-material/Settings';
+import Logout from '@mui/icons-material/Logout';
+import { AccountCircle } from '@mui/icons-material';
 const Header = () => {
   const [user]=useAuthState(auth);
   const navigate=useNavigate();
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary h-20 " bg="dark" data-bs-theme="dark">
     <Container>
@@ -15,7 +27,7 @@ const Header = () => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
          
-          <NavDropdown style={{marginLeft:"49rem"}} title="Features" id="collasible-nav-dropdown">
+          <NavDropdown style={{marginLeft:"52rem"}} title="Features" id="collasible-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Notification</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">
               Grades
@@ -27,13 +39,90 @@ const Header = () => {
         <Nav>
         <Nav.Link className='mr-3' href="#">New Class</Nav.Link>
           <Nav.Link  className='mr-3' href="#">Join Class</Nav.Link>
+          </Nav>
         {
-          user? (<Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />) :
+          user? (
+            <React.Fragment>
+  <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center',fontSize: '10rem' }}>
+    <Tooltip title="Profile">
+      <IconButton
+        aria-label="account of current user"
+        aria-controls="account-menu"
+        aria-haspopup="true"
+        onClick={handleClick}
+        color="white"
+        sx={{ fontSize: '10rem' }}
+      >
+        <AccountCircle />
+      </IconButton>
+    </Tooltip>
+  </Box>
+  <Menu
+    anchorEl={anchorEl}
+    id="account-menu"
+    open={open}
+    onClose={handleClose}
+    onClick={handleClose}
+    PaperProps={{
+      elevation: 0,
+      sx: {
+        overflow: 'visible',
+        filter: 'drop-shadow(0px 6px 10px rgba(0,0,0,0.32))',
+        mt: 1.5,
+        '& .MuiAvatar-root': {
+          width: 20,
+          height: 20,
+          ml: -0.5,
+          mr: 1,
+        },
+        '& .MuiMenu-paper:before': {
+          width: '50px', // Increase the width for the dropdown arrow
+          height: '50px', // Increase the height for the dropdown arrow
+          backgroundColor: 'background.paper',
+          transform: 'translateY(-50%) rotate(45deg)',
+          zIndex: 0,
+        },
+      },
+    }}
+    transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+    anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+  >
+    <MenuItem onClick={handleClose}>
+      <Avatar /> Profile
+    </MenuItem>
+    <MenuItem onClick={handleClose}>
+      <Avatar /> My account
+    </MenuItem>
+    <Divider />
+    <MenuItem onClick={handleClose}>
+      <ListItemIcon>
+        <PersonAdd fontSize="small" />
+      </ListItemIcon>
+      Add another account
+    </MenuItem>
+    <MenuItem onClick={handleClose}>
+      <ListItemIcon>
+        <Settings fontSize="small" />
+      </ListItemIcon>
+      Settings
+    </MenuItem>
+    <MenuItem onClick={handleClose}>
+      <ListItemIcon>
+        <Logout fontSize="small" />
+      </ListItemIcon>
+      Logout
+    </MenuItem>
+  </Menu>
+</React.Fragment>
+
+            
+
+        ) :
           (<button onClick={()=>navigate('/signup')} className="btn btn-sm btn-active btn-primary ml-3 mt-1">SignUP</button>)
 
         } 
 
-        </Nav>
+        
       </Navbar.Collapse>
     </Container>
   </Navbar>
