@@ -33,7 +33,7 @@ const Signup = () => {
     navigate('/home');
   }
     return (
-          <Card className="shadow-lg p-3 mb-5 bg-white rounded w-50 mx-auto" style={{ width: '15rem',height:'32rem',marginTop:'70px' }}>
+          <Card className="shadow-lg p-3 mb-5 bg-white rounded w-50 mx-auto" style={{ width: '15rem',height:'33rem',marginTop:'70px' }}>
             <Card.Body className=''>
             <div >
         <h2 className="text-center mt-3 mb-3">Please Register</h2>

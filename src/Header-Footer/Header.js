@@ -91,14 +91,10 @@ const Header = () => {
       <Avatar /> Profile
     </MenuItem>
     <MenuItem onClick={handleClose}>
-      <Avatar /> My account
-    </MenuItem>
-    <Divider />
-    <MenuItem onClick={handleClose}>
       <ListItemIcon>
         <PersonAdd fontSize="small" />
       </ListItemIcon>
-      Add another account
+      Invite
     </MenuItem>
     <MenuItem onClick={handleClose}>
       <ListItemIcon>
