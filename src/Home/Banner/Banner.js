@@ -7,6 +7,9 @@ import pic3 from '../../Pictures/banner3.png';
 const Banner = () => {
     return (
         <Carousel className='w-100' >
+
+          {/* carousel image 1  */}
+
         <Carousel.Item>
           <img
             className="d-block w-100" style={{height:'35rem'}}
@@ -17,6 +20,8 @@ const Banner = () => {
             
           </Carousel.Caption>
         </Carousel.Item>
+
+        {/* carousel image 2  */}
         <Carousel.Item>
           <img
             className="d-block w-100" style={{height:'35rem'}}
@@ -28,6 +33,8 @@ const Banner = () => {
             
           </Carousel.Caption>
         </Carousel.Item>
+
+        {/* carousel image 3  */}
         <Carousel.Item>
           <img
             className="d-block w-100" style={{height:'35rem'}}

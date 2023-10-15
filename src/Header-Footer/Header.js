@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Dropdown, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
-import { useAuthState } from 'react-firebase-hooks/auth';
+import { useAuthState, useSignOut } from 'react-firebase-hooks/auth';
 import { Avatar, Box, Divider, IconButton, ListItemIcon, Menu, MenuItem, Tooltip, Typography } from '@mui/material';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
@@ -10,6 +10,7 @@ import Logout from '@mui/icons-material/Logout';
 import { AccountCircle } from '@mui/icons-material';
 const Header = () => {
   const [user]=useAuthState(auth);
+  const [signOut] = useSignOut(auth);
   const navigate=useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -22,7 +23,11 @@ const Header = () => {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary h-20 " bg="dark" data-bs-theme="dark">
     <Container>
+      {/* Web title */}
       <Navbar.Brand href="/">Invigilator</Navbar.Brand>
+
+
+      {/* navbar menu  */}
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
@@ -40,6 +45,9 @@ const Header = () => {
         <Nav.Link className='mr-3' href="#">New Class</Nav.Link>
           <Nav.Link  className='mr-3' href="#">Join Class</Nav.Link>
           </Nav>
+
+
+          {/* condition menu if user exist showing user profile picture unless signup button  */}
         {
           user? (
             <React.Fragment>
@@ -86,6 +94,8 @@ const Header = () => {
     }}
     transformOrigin={{ horizontal: 'right', vertical: 'top' }}
     anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+
+    // drop down menu item
   >
     <MenuItem onClick={handleClose}>
       <Avatar /> Profile
@@ -102,9 +112,9 @@ const Header = () => {
       </ListItemIcon>
       Settings
     </MenuItem>
-    <MenuItem onClick={handleClose}>
+    <MenuItem onClick={signOut}>
       <ListItemIcon>
-        <Logout fontSize="small" />
+        <Logout fontSize="small"  />
       </ListItemIcon>
       Logout
     </MenuItem>
@@ -114,7 +124,7 @@ const Header = () => {
             
 
         ) :
-          (<button onClick={()=>navigate('/signup')} className="btn btn-sm btn-active btn-primary ml-3 mt-1">SignUP</button>)
+          (<button onClick={()=>navigate('/login')} className="btn btn-sm btn-active btn-primary ml-3 mt-1">Login</button>)
 
         } 
 

@@ -5,6 +5,8 @@ import './Features.css';
 
 const Features = () => {
     const [features,setFeatures]=useState([]);
+
+//    feature loads using json 
     useEffect(()=>{
         fetch("Features.json")
         .then((res)=>res.json())
@@ -13,6 +15,7 @@ const Features = () => {
     return (
         <div id="features" className="container">
             <h1 className='features-title mt-3 mb-5'>Our Features</h1>
+            {/* pass objects onto subclass  */}
             <div  className="features-container">
                 {features.map(feature=>(<Feature key={feature._id} feature={feature}></Feature>))}
             </div>
