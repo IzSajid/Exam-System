@@ -7,7 +7,7 @@ import Header from './Header-Footer/Header';
 import Banner from './Home/Banner/Banner';
 import Footer from './Header-Footer/Footer/Footer';
 import Forgetpass from './Authentication/Forgetpass';
-import {user} from './firebase.init';
+import Createclass from './Classes/Createclass';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
     <Route path='/login' element={<Login></Login>}></Route>
     <Route path='/banner' element={<Banner></Banner>}></Route>
     <Route path='/forgetpass' element={<Forgetpass></Forgetpass>}></Route>
-    <Route></Route>
+    <Route path='/createclass' element={<Createclass></Createclass>}></Route>
    </Routes>
    <Footer></Footer>
 
