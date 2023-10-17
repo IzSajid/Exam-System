@@ -1,30 +1,33 @@
 import { Chip, Divider } from '@mui/material';
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Createclass = () => {
+
     const handleCreateClass=e=>{
         e.preventDefault();
         const email=e.target.email.value;
-        const id=e.target.id.value;
+        const cid=e.target.cid.value;
+        const name=e.target.name.value;
 
-        const newClass={email,id}
+        const newClass={email,cid,name}
 
         // send data to server 
-        fetch('http://localhost:5000/class',{
-            method:'POST',
-            headers:{
-                'content-type':'application/json',
-            },
-            body:JSON.stringify(newClass)
-
-        })
-        .then(res=>res.json())
-        .then(data=>{console.log('success',data)})
-
-    }
+        fetch('http://localhost:5000/user', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newClass),
+  })
+  .then(res=>res.json())
+  .then(data=>console.log(data)
+   )
+  
+};
     return (
-            <div className="shadow-lg p-3 mb-5 bg-gray-700 rounded w-50 mx-auto text-white" style={{ width: '10rem',height:'24rem',marginTop:'70px' }}>
+            <div className="shadow-lg p-3 mb-5 bg-gray-700 rounded w-50 mx-auto text-white" style={{ width: '10rem',height:'30rem',marginTop:'70px' }}>
                 <h1 className='text-center mb-2'>Create new Class</h1>
 
 
@@ -36,21 +39,35 @@ const Createclass = () => {
    
    {/* input form start for new class  */}
    <Form onSubmit={handleCreateClass}>
+
+
+   <Form.Group  className="mb-6 w-50 mx-auto" controlId="formBasicName">
+                <Form.Label>Class Name</Form.Label>
+                <Form.Control name='name' type="text" placeholder="Enter Class Name" />
+              </Form.Group>
+
   <Form.Group  className="mb-6 w-50 mx-auto" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control name='email' type="email" placeholder="Enter email" />
               </Form.Group>
         
+ 
+        
               <Form.Group className="mb-6 w-50 mx-auto" controlId="formBasicPassword">
                 <Form.Label>Class Code</Form.Label>
-                <Form.Control name='id' type="password" placeholder="Password" />
+                <Form.Control name='cid' type="password" placeholder="Password" />
               </Form.Group>
 
               {/* submitting the form through button by declaring button type submit  */}
-              <Button variant="primary" type="submit" className="black w-50  mx-auto d-block mb-8 mt-8">
-                Submit
-              </Button>
+            
               {/* button end  */}
+              <Link to='/showclasses'>
+                 <Button variant="primary" type="submit" className="black w-50  mx-auto d-block mb-8 mt-8">
+                Submit
+                
+              </Button>
+              </Link>
+              
 
 
             </Form>
