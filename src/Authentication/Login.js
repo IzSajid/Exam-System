@@ -78,7 +78,7 @@ if(user){
           <Link to='/forgetpass'> click here
           </Link>
         </p>
-        <p>New to Online Hashor ? <Link to='/signup'>Click here</Link></p>
+        <p>New to Virtual Hashor ? <Link to='/signup'>Click here</Link></p>
        
       </div>
             </Card.Body>
