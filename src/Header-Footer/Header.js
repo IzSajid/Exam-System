@@ -32,7 +32,7 @@ const Header = () => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
          
-          <NavDropdown style={{marginLeft:"52rem"}} title="Features" id="collasible-nav-dropdown">
+          <NavDropdown style={{marginLeft:"49rem"}} title="Features" id="collasible-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Notification</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">
               Grades
@@ -42,8 +42,13 @@ const Header = () => {
           </NavDropdown>
         </Nav>
         <Nav>
-        <Nav.Link  className='mr-3' href="/createclass">New Class</Nav.Link>
-          <Nav.Link  className='mr-3' href="/showclasses">Join Class</Nav.Link>
+        {
+          user?<Nav.Link  className='mr-3' href="/createclass">New Class</Nav.Link>:<Nav.Link  className='mr-3' href="/login">New Class</Nav.Link>
+        }
+        {
+          user? <Nav.Link  className='mr-3' href="/showclasses">Join Class</Nav.Link>:<Nav.Link  className='mr-3' href="/login">Join Class</Nav.Link>
+        }
+         
           </Nav>
 
 
