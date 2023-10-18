@@ -1,9 +1,10 @@
 import { Chip, Divider } from '@mui/material';
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Createclass = () => {
+  const navigate=useNavigate();
 
     const handleCreateClass=e=>{
         e.preventDefault();
@@ -24,6 +25,7 @@ const Createclass = () => {
   .then(res=>res.json())
   .then(data=>console.log(data)
    )
+   navigate('/showclasses')
   
 };
     return (
@@ -61,12 +63,12 @@ const Createclass = () => {
               {/* submitting the form through button by declaring button type submit  */}
             
               {/* button end  */}
-              <Link to='/showclasses'>
+            
                  <Button variant="primary" type="submit" className="black w-50  mx-auto d-block mb-8 mt-8">
                 Submit
                 
               </Button>
-              </Link>
+              
               
 
 

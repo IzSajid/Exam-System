@@ -10,6 +10,10 @@ import Forgetpass from './Authentication/Forgetpass';
 import Createclass from './Classes/Createclass';
 import Showclass from './Classes/Showclass';
 import ShowClasses from './Classes/ShowClasses';
+import Menu from './Cohorts/Menu';
+import VerticalMenu from './Cohorts/VerticalMenu';
+import Students from './Cohorts/Students';
+
 
 function App() {
   return (
@@ -25,7 +29,9 @@ function App() {
     <Route path='/createclass' element={<Createclass></Createclass>}></Route>
     <Route path='/showclass' element={<Showclass></Showclass>}></Route>
     <Route path='/showclasses' element={<ShowClasses></ShowClasses>}></Route>
-
+    <Route path='/menu' element={<Menu></Menu>}></Route>
+    <Route path='/verticalmenu' element={<VerticalMenu></VerticalMenu>}></Route>
+    <Route path='/students' element={<Students></Students>}></Route>
    </Routes>
    <Footer></Footer>
 

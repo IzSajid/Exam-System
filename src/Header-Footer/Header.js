@@ -43,7 +43,7 @@ const Header = () => {
         </Nav>
         <Nav>
         <Nav.Link  className='mr-3' href="/createclass">New Class</Nav.Link>
-          <Nav.Link  className='mr-3' href="#">Join Class</Nav.Link>
+          <Nav.Link  className='mr-3' href="/showclasses">Join Class</Nav.Link>
           </Nav>
 
 
