@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import ShowStudents from './ShowStudents';
+import Menu from './Menu';
+import './Students.css'
 
 const Students = () => {
   
@@ -23,6 +25,8 @@ const Students = () => {
     return (
       <div>
         
+      
+      
             <Form onSubmit={handleSubmit} className='w-50 mx-auto'>
           <Form.Group className="mb-3 mt-4" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
@@ -33,14 +37,12 @@ const Students = () => {
               required
             />
           </Form.Group>
-          <Button variant="primary" type='submit'>Submit</Button>
+          <Button className='w-25  mx-auto d-block mb-4 mt-4' variant="primary" type='submit'>Submit</Button>
           <ShowStudents></ShowStudents>
           </Form>
-         
-
-
-          
           </div>
+          
+        
             
     );
 };

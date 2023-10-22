@@ -1,0 +1,4 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: fr(0.25,0.75);
+}
