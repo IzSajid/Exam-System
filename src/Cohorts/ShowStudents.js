@@ -5,6 +5,8 @@ import './ShowStudents.css'
 
 const ShowStudents = () => {
     const[students,setStudents]=useState([]);
+
+    
     useEffect(()=>{
         fetch('http://localhost:5000/students')
         .then(res=>res.json())
