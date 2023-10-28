@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import ShowStudents from './ShowStudents';
 import './Students.css'
 import { Button } from 'react-bootstrap';
+import Menu from './Menu';
 
 const Students = () => {
   const [recipientEmail, setRecipientEmail] = useState('');
@@ -26,9 +27,9 @@ const Students = () => {
 
             // for auto reload the page after successfully adding an email 
 
-            setTimeout(() => {
+           
               window.location.reload();
-            }, 2000);
+        
 
           } 
           
@@ -46,7 +47,11 @@ const Students = () => {
     return (
       
         
-        <div>
+        <div className='grid grid-cols-12'>
+         <div className='grid col-span-2'>
+         <Menu></Menu>
+         </div>
+      <div className='grid col-span-10'>
       <h1 className='text-center mt-4'>Email Invitation Form</h1>
       <form style={{textAlign:'center'}} onSubmit={handleSubmit}>
         <label  htmlFor="recipientEmail">Recipient's Email:</label>
@@ -64,6 +69,7 @@ const Students = () => {
       </form>
       <div className='text-center mb-4 text-red-700 font-bold'>{message}</div>
       <ShowStudents></ShowStudents>
+      </div>
     </div>
         
             

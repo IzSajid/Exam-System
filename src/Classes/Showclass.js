@@ -1,16 +1,21 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import pic1 from '../Pictures/writing-online-exam.webp'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
 
 
 const Showclass = ({user}) => {
-    const {name,email,cid}=user;
-   
+    const {_id,name,email,cid}=user;
+    const navigate=useNavigate();
 
+    // const showclassNavigate=id=>{
+    //   navigate(`/menu/${id}`)
+
+    // }
+   
     return (
         <div >
           <Card className='mx-auto shadow-lg p-3 mb-5 rounded'  style={{ width: '18rem' }}>
@@ -28,7 +33,7 @@ const Showclass = ({user}) => {
         <Link>
          <p>Delete</p>
        </Link>
-        <Link to='/menu'><p className='ml-16'> Details </p></Link>
+        <Button className='' variant='link' onClick={()=>navigate('/dashboard')}><p className='ml-5'> Detail </p></Button>
      
      </div>
     </Card>

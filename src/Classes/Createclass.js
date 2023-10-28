@@ -45,19 +45,19 @@ const Createclass = () => {
 
    <Form.Group  className="mb-6 w-50 mx-auto" controlId="formBasicName">
                 <Form.Label>Class Name</Form.Label>
-                <Form.Control name='name' type="text" placeholder="Enter Class Name" />
+                <Form.Control name='name' type="text" placeholder="Enter Class Name" required/>
               </Form.Group>
 
   <Form.Group  className="mb-6 w-50 mx-auto" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control name='email' type="email" placeholder="Enter email" />
+                <Form.Control name='email' type="email" placeholder="Enter email" required />
               </Form.Group>
         
  
         
               <Form.Group className="mb-6 w-50 mx-auto" controlId="formBasicPassword">
                 <Form.Label>Class Code</Form.Label>
-                <Form.Control name='cid' type="password" placeholder="Password" />
+                <Form.Control name='cid' type="password" placeholder="Password" required />
               </Form.Group>
 
               {/* submitting the form through button by declaring button type submit  */}
