@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import './ShowStudents.css'
 import { Button } from 'react-bootstrap';
+import useClassById from '../Hooks/useClassById';
+import { useParams } from 'react-router-dom';
 
 
 
 const ShowStudents = () => {
     const[students,setStudents]=useState([]);
+    const {userId}=useParams();
+    const [user]=useClassById(userId);
 
     
     useEffect(()=>{
-        fetch('http://localhost:5000/students')
+        fetch(`http://localhost:5000/students`)
         .then(res=>res.json())
         .then(data=>setStudents(data))
-    },[]);
+    },[userId]);
 
     // delete student from class 
     const handleStudentDelete = (id) => {
@@ -56,6 +60,7 @@ const ShowStudents = () => {
         {
             students.map(student=>
                 <li className=' shadow-lg shadow-indigo-500/50 border h-16 text-center font-semibold grid grid-cols-3'>
+                    
 
                     {/* students icon  */}
                     <div class="relative w-11 h-6 overflow-hidden  rounded-full ml-40 mt-2">

@@ -4,17 +4,25 @@ import ShowStudents from './ShowStudents';
 import './Students.css'
 import { Button } from 'react-bootstrap';
 import Menu from './Menu';
+import { useParams } from 'react-router-dom';
+import useClassById from '../Hooks/useClassById';
 
 const Students = () => {
   const [recipientEmail, setRecipientEmail] = useState('');
   const [message, setMessage] = useState('');
+
+
+  // load the classes by id 
+  const {userId}= useParams();
+  
+  const [user]=useClassById(userId);
 
   
     
     const handleSubmit=async (e)=>{
         e.preventDefault()
         try {
-          const response = await fetch('http://localhost:5000/student', {
+          const response = await fetch(`http://localhost:5000/student`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -47,12 +55,16 @@ const Students = () => {
     return (
       
         
-        <div className='grid grid-cols-12'>
+        <div >
+          <div>
+
+          </div>
+          <div className='grid grid-cols-12 gap-2'>
          <div className='grid col-span-2'>
          <Menu></Menu>
          </div>
       <div className='grid col-span-10'>
-      <h1 className='text-center mt-4'>Email Invitation Form</h1>
+      <h1 className='text-center mt-4'>Email Invitation Form {user.name}</h1>
       <form style={{textAlign:'center'}} onSubmit={handleSubmit}>
         <label  htmlFor="recipientEmail">Recipient's Email:</label>
         <input style={{marginLeft:'15px',marginBottom:'15px',marginTop:'15px'}}
@@ -70,6 +82,7 @@ const Students = () => {
       <div className='text-center mb-4 text-red-700 font-bold'>{message}</div>
       <ShowStudents></ShowStudents>
       </div>
+    </div>
     </div>
         
             

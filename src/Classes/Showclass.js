@@ -8,13 +8,13 @@ import { Link, useNavigate } from 'react-router-dom';
 
 
 const Showclass = ({user}) => {
-    const {_id,name,email,cid}=user;
+    const {_id,name,cid}=user;
     const navigate=useNavigate();
 
-    // const showclassNavigate=id=>{
-    //   navigate(`/menu/${id}`)
+    const showclassNavigate=id=>{
+      navigate(`/user/${id}`)
 
-    // }
+    }
    
     return (
         <div >
@@ -33,7 +33,7 @@ const Showclass = ({user}) => {
         <Link>
          <p>Delete</p>
        </Link>
-        <Button className='' variant='link' onClick={()=>navigate('/dashboard')}><p className='ml-5'> Detail </p></Button>
+        <Button className='' variant='link' onClick={()=>showclassNavigate(_id)}><p className='ml-5'> Detail </p></Button>
      
      </div>
     </Card>

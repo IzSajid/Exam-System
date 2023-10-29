@@ -1,8 +1,15 @@
 import { Sidebar } from 'flowbite-react';
+import { useEffect, useState } from 'react';
 import { HiArrowSmRight, HiChartPie, HiInbox, HiShoppingBag, HiTable, HiUser, HiViewBoards } from 'react-icons/hi';
+import { useParams } from 'react-router-dom';
+import useClassById from '../Hooks/useClassById';
 
 
 const Menu = () => {
+  const {userId}=useParams();
+  const [user]=useClassById(userId);
+  const {_id}=user;
+  
     return (
         <Sidebar className='bg-black'>
       <Sidebar.Items>
@@ -35,7 +42,7 @@ const Menu = () => {
             </p>
           </Sidebar.Item>
           <Sidebar.Item
-            href="/students"
+            href={`/user/${_id}`}
             icon={HiUser}
           >
             <p>
@@ -48,14 +55,6 @@ const Menu = () => {
           >
             <p>
               Products
-            </p>
-          </Sidebar.Item>
-          <Sidebar.Item
-            href="/login"
-            icon={HiArrowSmRight}
-          >
-            <p>
-              Sign In
             </p>
           </Sidebar.Item>
           <Sidebar.Item

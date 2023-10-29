@@ -2,7 +2,7 @@ import React from 'react';
 import './Feature.css';
 
 const Feature = ({ feature }) => {
-    const { _id, name, image, description } = feature;
+    const {  name, description } = feature;
 
     // const cardStyle = {
     //     backgroundImage: `url(${image})`, // Set background image using template string

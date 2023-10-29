@@ -13,6 +13,7 @@ import ShowClasses from './Classes/ShowClasses';
 import Menu from './Cohorts/Menu';
 import Students from './Cohorts/Students';
 import Dashboard from './Cohorts/Dashboard';
+import ShowStudents from './Cohorts/ShowStudents';
 
 
 function App() {
@@ -30,8 +31,9 @@ function App() {
     <Route path='/showclass' element={<Showclass></Showclass>}></Route>
     <Route path='/showclasses' element={<ShowClasses></ShowClasses>}></Route>
     <Route path='/menu' element={<Menu></Menu>}></Route>
-    <Route path='/students' element={<Students></Students>}></Route>
+    <Route path='/user/:id' element={<Students></Students>}></Route>
     <Route path="/dashboard" element={<Dashboard></Dashboard>} />
+    <Route path='/showstudents' element={<ShowStudents></ShowStudents>}></Route>
    </Routes>
    <Footer></Footer>
 
