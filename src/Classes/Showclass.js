@@ -12,7 +12,7 @@ const Showclass = ({user}) => {
     const navigate=useNavigate();
 
     const showclassNavigate=id=>{
-      navigate(`/user/${id}`)
+      navigate(`/classes/${id}`)
 
     }
    

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import './ShowStudents.css'
 import { Button } from 'react-bootstrap';
@@ -8,15 +9,21 @@ import { useParams } from 'react-router-dom';
 
 const ShowStudents = () => {
     const[students,setStudents]=useState([]);
-    const {userId}=useParams();
-    const [user]=useClassById(userId);
+    const [classId, setClassId]=useState([]);
+    const {id}=useParams();
+    const [user]=useClassById(id);
+   
 
     
-    useEffect(()=>{
-        fetch(`http://localhost:5000/students`)
-        .then(res=>res.json())
-        .then(data=>setStudents(data))
-    },[userId]);
+    useEffect(() => {
+        // Fetch students for the specific class (based on classId)
+        const url=`http://localhost:5000/classes/${id}/student`
+        console.log(url);
+        fetch(url)
+          .then((res) => res.json())
+          .then((data) => setStudents(data));
+      }, []);
+      
 
     // delete student from class 
     const handleStudentDelete = (id) => {

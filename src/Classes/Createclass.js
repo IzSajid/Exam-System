@@ -1,10 +1,13 @@
 import { Chip, Divider } from '@mui/material';
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
+import auth from '../firebase.init';
 
 const Createclass = () => {
   const navigate=useNavigate();
+  const [user]=useAuthState(auth)
 
     const handleCreateClass=e=>{
         e.preventDefault();
@@ -15,7 +18,7 @@ const Createclass = () => {
         const newClass={email,cid,name}
 
         // send data to server 
-        fetch('http://localhost:5000/user', {
+        fetch('http://localhost:5000/classes', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -50,7 +53,7 @@ const Createclass = () => {
 
   <Form.Group  className="mb-6 w-50 mx-auto" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control name='email' type="email" placeholder="Enter email" required />
+                <Form.Control value={user?user.email:''} name='email' type="email" disabled />
               </Form.Group>
         
  

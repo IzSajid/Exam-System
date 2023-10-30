@@ -6,9 +6,10 @@ import useClassById from '../Hooks/useClassById';
 
 
 const Menu = () => {
-  const {userId}=useParams();
-  const [user]=useClassById(userId);
-  const {_id}=user;
+  const {id}=useParams();
+  const [user]=useClassById(id);
+  console.log(user.name);
+  
   
     return (
         <Sidebar className='bg-black'>
@@ -19,7 +20,7 @@ const Menu = () => {
             icon={HiChartPie}
           >
             <p>
-              Dashboard
+             Dashboard
             </p>
           </Sidebar.Item>
           <Sidebar.Item
@@ -42,7 +43,7 @@ const Menu = () => {
             </p>
           </Sidebar.Item>
           <Sidebar.Item
-            href={`/user/${_id}`}
+             href = {`/classes/${id}/student`}
             icon={HiUser}
           >
             <p>
@@ -50,7 +51,7 @@ const Menu = () => {
             </p>
           </Sidebar.Item>
           <Sidebar.Item
-            href="#"
+            href='#'
             icon={HiShoppingBag}
           >
             <p>

@@ -10,24 +10,35 @@ import useClassById from '../Hooks/useClassById';
 const Students = () => {
   const [recipientEmail, setRecipientEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [students, setStudents] = useState([]);
 
 
   // load the classes by id 
-  const {userId}= useParams();
-  
-  const [user]=useClassById(userId);
+  const {id}= useParams();
+  const [user]=useClassById(id);
+  // useEffect(() => {
+  //   // Fetch students for the specific class (based on classId)
+  //   const url=`http://localhost:5000/classes/${id}/student`
+  //   console.log(url);
+  //   fetch(url)
+  //     .then((res) => res.json())
+  //     .then((data) => setStudents(data));
+  // }, []);
 
   
     
     const handleSubmit=async (e)=>{
         e.preventDefault()
         try {
-          const response = await fetch(`http://localhost:5000/student`, {
+          const response = await fetch(`http://localhost:5000/classes/${id}/student`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ recipient: recipientEmail }),
+            body: JSON.stringify({
+              recipient: recipientEmail,
+              students: students.map(student => ({ ...student, classId: id })),
+            }),
           });
     
           if (response.ok) {
