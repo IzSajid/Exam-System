@@ -8,7 +8,7 @@ import useClassById from '../Hooks/useClassById';
 const Dashboard = () => {
    const [classes,setClasses]=useState([]);
    const {id}=useParams();
-  const [user]=useClassById(id);
+  const user=useClassById(id);
      console.log(id)
 //    const {id}=useParams();
 //    useEffect(()=>{

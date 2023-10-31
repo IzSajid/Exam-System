@@ -1,4 +1,4 @@
-import { Route, Routes} from 'react-router-dom';
+import {Routes, Route } from "react-router-dom";
 import './App.css';
 import Login from './Authentication/Login';
 import Signup from './Authentication/Signup';
@@ -14,6 +14,9 @@ import Menu from './Cohorts/Menu';
 import Students from './Cohorts/Students';
 import Dashboard from './Cohorts/Dashboard';
 import ShowStudents from './Cohorts/ShowStudents';
+import Teacher from './Cohorts/Teacher';
+import UseClassById from './Hooks/useClassById';
+import ClassDetail from './Hooks/ClassDetail';
 
 
 function App() {
@@ -32,8 +35,16 @@ function App() {
     <Route path='/showclasses' element={<ShowClasses></ShowClasses>}></Route>
     <Route path='/menu' element={<Menu></Menu>}></Route>
     <Route path='/classes/:id/student' element={<Students></Students>}></Route>
-    <Route path="/classes/:id" element={<Dashboard></Dashboard>} />
+    
+     <Route path="/classes/:id" component={UseClassById} element={<Dashboard></Dashboard>} ></Route>
+    
+    
     <Route path='/showstudents' element={<ShowStudents></ShowStudents>}></Route>
+    <Route path='/teacher' element={<Teacher></Teacher>}></Route>
+    <Route path='/hooks'  component={ClassDetail} element={<ClassDetail></ClassDetail>}> </Route>
+
+   
+
    </Routes>
    <Footer></Footer>
 

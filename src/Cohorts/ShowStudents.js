@@ -11,7 +11,7 @@ const ShowStudents = () => {
     const[students,setStudents]=useState([]);
     const [classId, setClassId]=useState([]);
     const {id}=useParams();
-    const [user]=useClassById(id);
+    const user=useClassById(id);
    
 
     

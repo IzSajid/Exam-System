@@ -75,7 +75,7 @@ const Students = () => {
          <Menu></Menu>
          </div>
       <div className='grid col-span-10'>
-      <h1 className='text-center mt-4'>Email Invitation Form {user.name}</h1>
+      <h1 className='text-center mt-4'>Email Invitation Form </h1>
       <form style={{textAlign:'center'}} onSubmit={handleSubmit}>
         <label  htmlFor="recipientEmail">Recipient's Email:</label>
         <input style={{marginLeft:'15px',marginBottom:'15px',marginTop:'15px'}}

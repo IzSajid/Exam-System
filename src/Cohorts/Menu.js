@@ -7,7 +7,9 @@ import useClassById from '../Hooks/useClassById';
 
 const Menu = () => {
   const {id}=useParams();
-  const [user]=useClassById(id);
+  // const [user]=useClassById(id);
+   const user=useClassById(id);
+
   console.log(user.name);
   
   
@@ -43,21 +45,22 @@ const Menu = () => {
             </p>
           </Sidebar.Item>
           <Sidebar.Item
+            href='/teacher'
+            icon={HiShoppingBag}
+          >
+            <p>
+              Teacher
+            </p>
+          </Sidebar.Item>
+          <Sidebar.Item
              href = {`/classes/${id}/student`}
             icon={HiUser}
           >
             <p>
-              People
+              Student
             </p>
           </Sidebar.Item>
-          <Sidebar.Item
-            href='#'
-            icon={HiShoppingBag}
-          >
-            <p>
-              Products
-            </p>
-          </Sidebar.Item>
+         
           <Sidebar.Item
             href="#signup"
             icon={HiTable}
