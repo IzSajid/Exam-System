@@ -12,11 +12,11 @@ module.exports = {
             
    "primary": "#708090",
             
-   "secondary": "#d926a9",
+   "secondary": "#ff6347",
             
    "accent": "#1fb2a6",
             
-   "neutral": "#708090",
+   "neutral": "",
             
    "base-100": "#1d232a",
             
@@ -24,7 +24,7 @@ module.exports = {
             
    "success": "#36d399",
             
-   "warning": "#fbbd23",
+   "warning": "",
             
    "error": "#f87272",
             },

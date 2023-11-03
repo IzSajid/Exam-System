@@ -17,8 +17,9 @@ import ShowStudents from './Cohorts/ShowStudents';
 import Teacher from './Cohorts/Teacher';
 import UseClassById from './Hooks/useClassById';
 import ClassDetail from './Hooks/ClassDetail';
-
-
+import Quizz from "./Assestment/Quizz";
+import Questions from "./Assestment/Questions";
+import Design from "./Assestment/Design";
 function App() {
   return (
     <div>
@@ -37,11 +38,18 @@ function App() {
     <Route path='/classes/:id/student' element={<Students></Students>}></Route>
     
      <Route path="/classes/:id" component={UseClassById} element={<Dashboard></Dashboard>} ></Route>
+     <Route path='/quizz' element={<Quizz></Quizz>}></Route>
+     <Route path='/questions' element={<Questions></Questions>}></Route>
+     <Route path='/design' element={<Design></Design>}></Route>
+     
+     
+    
     
     
     <Route path='/showstudents' element={<ShowStudents></ShowStudents>}></Route>
     <Route path='/teacher' element={<Teacher></Teacher>}></Route>
-    <Route path='/hooks'  component={ClassDetail} element={<ClassDetail></ClassDetail>}> </Route>
+    <Route path='/hooks' element={<ClassDetail></ClassDetail>}> </Route>
+    
 
    
 

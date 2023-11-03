@@ -6,7 +6,7 @@ const Footer = () => {
         <div>
           {/* footer starts */}
 
-      <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded mt-16">
+      <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
   <div className="grid grid-flow-col gap-4  ">
     <Link className="link link-hover text-white">About us</Link> 
     <Link className="link link-hover text-white">Contact</Link> 
