@@ -26,7 +26,7 @@ const Menu = () => {
             </p>
           </Sidebar.Item>
           <Sidebar.Item
-            href="#"
+            href="/design"
             icon={HiViewBoards}
             label="Pro"
             labelColor="dark"

@@ -20,6 +20,7 @@ import ClassDetail from './Hooks/ClassDetail';
 import Quizz from "./Assestment/Quizz";
 import Questions from "./Assestment/Questions";
 import Design from "./Assestment/Design";
+import Result from "./Assestment/Result";
 function App() {
   return (
     <div>
@@ -41,6 +42,8 @@ function App() {
      <Route path='/quizz' element={<Quizz></Quizz>}></Route>
      <Route path='/questions' element={<Questions></Questions>}></Route>
      <Route path='/design' element={<Design></Design>}></Route>
+     <Route path='/result' element={<Result></Result>}></Route>
+     <Route path="classdetail" element={<ClassDetail></ClassDetail>}></Route>
      
      
     

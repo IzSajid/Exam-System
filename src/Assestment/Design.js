@@ -1,56 +1,97 @@
-import React from 'react';
-import './Quizz.css';  
+import axios from 'axios';
+import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import Questions from './Questions';
+
 const Design = () => {
-    // next button event handler 
-     const handleNext=()=>{
-        console.log('on click next')
-        
-     }
+  const [totalquestion, setTotalquestion] = useState(0);
+  const [questions, setQuestions] = useState([]);
+ 
 
-     //previous button event handler
-     const handlePrev=()=>{
-        console.log('on previous click')
-     }
-    return (
-        <div className='bg-dark'>
-            <div className='text-center'>
-                <h1 className=''>Quizz</h1>
-                
+  const handleQuestionChange = (e, questionIndex) => {
+    const newQuestions = [...questions];
+    newQuestions[questionIndex].question = e.target.value;
+    setQuestions(newQuestions);
+  };
 
-            </div>
-            {/* <div style={{width:'70%', height:'auto'}} className='shadow-lg p-3 mb-5  bg-dark text-white mx-auto rounded '>
-                <h2>Question 1 out of 5</h2>
-                <h3>NSU is what?</h3>
-                <ul>
-                    <li>Big Business Institution</li>
-                    <li>Very Big business Institution</li>
-                    <li>Small Business Institution</li>
-                    <li>Very small Business Institution</li>
-                    </ul> */}
+  const handleOptionChange = (e, questionIndex, optionIndex) => {
+    const newQuestions = [...questions];
+    newQuestions[questionIndex].options[optionIndex] = e.target.value;
+    setQuestions(newQuestions);
+  };
 
-                    {/* display the questions  */}
-                    <Questions></Questions>
-                   
+  const handleCorrectOptionChange = (questionIndex, optionIndex) => {
+    const newQuestions = [...questions];
+    newQuestions[questionIndex].correctOption = optionIndex;
+    setQuestions(newQuestions);
+  };
 
+  const addQuestion = () => {
+    setQuestions([...questions, {
+      question: "",
+      options: ["", "", "", ""],
+      correctOption: 0,
+    }]);
+    setTotalquestion(totalquestion+1)
+  };
 
-                    <div className='grid grid-cols-2'>
-                    <Button onClick={()=>handlePrev()} className='btn btn-info btn-sm w-24'>Prev</Button>
-                <Button onClick={()=>handleNext()} className='btn btn-secondary btn-sm w-24'>Next</Button>
-               
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:5000/questions", questions);
+      console.log("Questions posted:", response.data);
+    } catch (error) {
+      console.error("Error posting questions:", error);
+    }
+  };
 
-            </div>
-                    </div>
-            
+  return (
+    <div>
+      <h1>Total question: {totalquestion}</h1>
 
+      <form onSubmit={handleSubmit}>
+        {questions.map((question, questionIndex) => (
+          <div key={questionIndex}>
+            <label>
+              Question {questionIndex + 1}:
+              <input
+                type="text"
+                value={question.question}
+                onChange={(e) => handleQuestionChange(e, questionIndex)}
+              />
+            </label>
 
+            {question.options.map((option, optionIndex) => (
+              <div key={optionIndex}>
+                <label>
+                  Option {optionIndex + 1}:
+                  <input
+                    type="text"
+                    value={option}
+                    onChange={(e) => handleOptionChange(e, questionIndex, optionIndex)}
+                  />
+                </label>
 
-          
-           
-            
+                <label>
+                  Correct Option:
+                  <input
+                    type="radio"
+                    value={optionIndex}
+                    checked={question.correctOption === optionIndex}
+                    onChange={() => handleCorrectOptionChange(questionIndex, optionIndex)}
+                  />
+                </label>
+              </div>
+            ))}
+          </div>
+        ))}
+
+       <Button type="button" onClick={addQuestion}>Next</Button> 
+         <Button type="submit">Submit</Button>
       
-    );
+       
+      </form>
+    </div>
+  );
 };
 
 export default Design;
