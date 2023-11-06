@@ -36,7 +36,7 @@ const Menu = () => {
             </p>
           </Sidebar.Item>
           <Sidebar.Item
-            href="#"
+            href="/design"
             icon={HiInbox}
             label="3"
           >

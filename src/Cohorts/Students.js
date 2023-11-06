@@ -67,9 +67,6 @@ const Students = () => {
       
         
         <div >
-          <div>
-
-          </div>
           <div className='grid grid-cols-12 gap-2'>
          <div className='grid col-span-2'>
          <Menu></Menu>
