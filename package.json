@@ -15,6 +15,8 @@
     "axios": "^1.6.0",
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.11.1",
+    "bson-objectid": "^2.0.4",
+    "crypto-browserify": "^3.12.0",
     "firebase": "^10.3.0",
     "flowbite-react": "^0.6.4",
     "nodemailer": "^6.9.6",
@@ -25,6 +27,7 @@
     "react-firebase-hooks": "^5.1.1",
     "react-router-dom": "^6.18.0",
     "react-scripts": "5.0.1",
+    "uuid": "^9.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

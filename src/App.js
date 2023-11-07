@@ -40,8 +40,8 @@ function App() {
     
      <Route path="/classes/:id" component={UseClassById} element={<Dashboard></Dashboard>} ></Route>
      <Route path='/quizz' element={<Quizz></Quizz>}></Route>
-     <Route path='/questions' element={<Questions></Questions>}></Route>
-     <Route path='/design' element={<Design></Design>}></Route>
+     <Route path='/classes/:id/:formid/question' element={<Questions></Questions>}></Route>
+     <Route path='/classes/:id/design' element={<Design></Design>}></Route>
      <Route path='/result' element={<Result></Result>}></Route>
      <Route path="classdetail" element={<ClassDetail></ClassDetail>}></Route>
      

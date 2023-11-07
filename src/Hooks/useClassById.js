@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 const useClassById=()=>{
     const {id}=useParams();
     const [user,setUser]=useState([]);
-    console.log(user)
+    // console.log(user)
   
     useEffect(()=>{
         const url=`http://localhost:3000/classes/${id}`
@@ -21,7 +21,7 @@ const useClassById=()=>{
             // Handle the error by setting user to null or an error state
           });
     },[id])
-    console.log(user.name)
+    // console.log(user.name)
    
     return [user];
     

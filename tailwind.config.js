@@ -33,5 +33,11 @@ module.exports = {
       
       extend: {},
     },
+    resolve: {
+      fallback: {
+        "crypto": require.resolve("crypto-browserify"),
+      },
+    },
     plugins: [require("daisyui"),require('flowbite/plugin')],
+    
   }
