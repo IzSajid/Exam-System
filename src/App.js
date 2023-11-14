@@ -22,6 +22,7 @@ import Questions from "./Assestment/Questions";
 import Design from "./Assestment/Design";
 import Result from "./Assestment/Result";
 import ShowQuestion from "./Assestment/ShowingQuestion/ShowQuestion";
+import McqQuestion from "./Assestment/ShowingQuestion/McqQuestion";
 function App() {
   return (
     <div>
@@ -41,6 +42,7 @@ function App() {
     
      <Route path="/classes/:id" element={<Dashboard></Dashboard>} ></Route>
      <Route path='/quizz' element={<Quizz></Quizz>}></Route>
+     <Route path="mcqQuestion" element={<McqQuestion></McqQuestion>}></Route>
     
      <Route path='/classes/:id/design' element={<Design></Design>}></Route>
      <Route path='/classes/:id/:formId/question' element={<ShowQuestion />} />

@@ -13,16 +13,9 @@ const ShowQuestion = () => {
           console.log(formId);
         const url=`http://localhost:5000/classes/${id}/${formId}/question`
         console.log(url)
-        axios.get(url)
-          .then((response) => {
-           
-            setmcq(response.data);
-            console.log(response.data);
-            // Further operations with the response data...
-          })
-          .catch((error) => {
-            console.error(error);
-          });
+       fetch(url)
+       .then(res=>res.json())
+       .then(data=>setmcq(data))
          
       }, [id, formId]);
     
