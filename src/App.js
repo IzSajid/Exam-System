@@ -21,6 +21,7 @@ import Quizz from "./Assestment/Quizz";
 import Questions from "./Assestment/Questions";
 import Design from "./Assestment/Design";
 import Result from "./Assestment/Result";
+import ShowQuestion from "./Assestment/ShowingQuestion/ShowQuestion";
 function App() {
   return (
     <div>
@@ -38,10 +39,11 @@ function App() {
     <Route path='/menu' element={<Menu></Menu>}></Route>
     <Route path='/classes/:id/student' element={<Students></Students>}></Route>
     
-     <Route path="/classes/:id" component={UseClassById} element={<Dashboard></Dashboard>} ></Route>
+     <Route path="/classes/:id" element={<Dashboard></Dashboard>} ></Route>
      <Route path='/quizz' element={<Quizz></Quizz>}></Route>
-     <Route path='/classes/:id/:formid/question' element={<Questions></Questions>}></Route>
+    
      <Route path='/classes/:id/design' element={<Design></Design>}></Route>
+     <Route path='/classes/:id/:formId/question' element={<ShowQuestion />} />
      <Route path='/result' element={<Result></Result>}></Route>
      <Route path="classdetail" element={<ClassDetail></ClassDetail>}></Route>
      

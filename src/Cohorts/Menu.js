@@ -6,11 +6,8 @@ import useClassById from '../Hooks/useClassById';
 
 
 const Menu = () => {
-  const {id}=useParams();
+  const {id,formId}=useParams();
   // const [user]=useClassById(id);
-   const user=useClassById(id);
-
-  console.log(user.name);
   
   
     return (
@@ -32,16 +29,16 @@ const Menu = () => {
             labelColor="dark"
           >
             <p>
-              Question
+              Add Questions
             </p>
           </Sidebar.Item>
           <Sidebar.Item
-            href="/design"
+            href={`/classes/${id}/${formId}/question`}
             icon={HiInbox}
             label="3"
           >
             <p>
-              Inbox
+              Assestment
             </p>
           </Sidebar.Item>
           <Sidebar.Item
