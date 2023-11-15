@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Dropdown, Nav, NavDropdown, Navbar } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import auth from '../firebase.init';
 import { useAuthState, useSignOut } from 'react-firebase-hooks/auth';
 import { Avatar, Box, Divider, IconButton, ListItemIcon, Menu, MenuItem, Tooltip, Typography } from '@mui/material';
@@ -14,6 +14,7 @@ const Header = () => {
   const navigate=useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  const {id}=useParams();
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };

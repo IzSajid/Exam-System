@@ -8,6 +8,8 @@ import auth from '../firebase.init';
 const Createclass = () => {
   const navigate=useNavigate();
   const [user]=useAuthState(auth)
+  const userEmail = user ? user.email : '';
+ 
 
     const handleCreateClass=e=>{
         e.preventDefault();
@@ -26,9 +28,7 @@ const Createclass = () => {
     body: JSON.stringify(newClass),
   })
   .then(res=>res.json())
-  .then(data=>console.log(data)
-   )
-   navigate('/showclasses')
+  .then(() => navigate('/showclasses', { state: { userEmail } }));
   
 };
     return (
