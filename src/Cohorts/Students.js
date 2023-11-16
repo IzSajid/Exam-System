@@ -6,16 +6,20 @@ import { Button } from 'react-bootstrap';
 import Menu from './Menu';
 import { useParams } from 'react-router-dom';
 import useClassById from '../Hooks/useClassById';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../firebase.init';
+import Login from '../Authentication/Login';
 
 const Students = () => {
   const [recipientEmail, setRecipientEmail] = useState('');
   const [message, setMessage] = useState('');
   const [students, setStudents] = useState([]);
+  const [user]=useAuthState(auth);
 
 
   // load the classes by id 
   const {id}= useParams();
-  const [user]=useClassById(id);
+ 
   // useEffect(() => {
   //   // Fetch students for the specific class (based on classId)
   //   const url=`http://localhost:5000/classes/${id}/student`
@@ -88,7 +92,9 @@ const Students = () => {
         </Button>
       </form>
       <div className='text-center mb-4 text-red-700 font-bold'>{message}</div>
-      <ShowStudents></ShowStudents>
+      {
+        user?<ShowStudents></ShowStudents>:<Login></Login>
+      }
       </div>
     </div>
     </div>
