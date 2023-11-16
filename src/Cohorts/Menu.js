@@ -3,11 +3,17 @@ import { useEffect, useState } from 'react';
 import { HiArrowSmRight, HiChartPie, HiInbox, HiShoppingBag, HiTable, HiUser, HiViewBoards } from 'react-icons/hi';
 import { useParams } from 'react-router-dom';
 import useClassById from '../Hooks/useClassById';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../firebase.init';
 
 
 const Menu = () => {
   const {id,formId}=useParams();
-  // const [user]=useClassById(id);
+  const [users]=useClassById(id);
+  const [user]=useAuthState(auth);
+  // if(users.email!=user.email){
+
+  // }
   
   
     return (
@@ -19,7 +25,7 @@ const Menu = () => {
             icon={HiChartPie}
           >
             <p>
-             Dashboard
+           {users.name}
             </p>
           </Sidebar.Item>
           <Sidebar.Item
@@ -33,7 +39,7 @@ const Menu = () => {
             </p>
           </Sidebar.Item>
           <Sidebar.Item
-            href={`/classes/${id}/${formId}/question`}
+            href={`/submitquestion/${id}`}
             icon={HiInbox}
             label="3"
           >

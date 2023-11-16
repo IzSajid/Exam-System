@@ -15,14 +15,16 @@ import Students from './Cohorts/Students';
 import Dashboard from './Cohorts/Dashboard';
 import ShowStudents from './Cohorts/ShowStudents';
 import Teacher from './Cohorts/Teacher';
-import UseClassById from './Hooks/useClassById';
+// import UseClassById from './Hooks/useClassById';
 import ClassDetail from './Hooks/ClassDetail';
 import Quizz from "./Assestment/Quizz";
-import Questions from "./Assestment/Questions";
+// import Questions from "./Assestment/Questions";
 import Design from "./Assestment/Design";
 import Result from "./Assestment/Result";
 import ShowQuestion from "./Assestment/ShowingQuestion/ShowQuestion";
 import McqQuestion from "./Assestment/ShowingQuestion/McqQuestion";
+import TextQuestionPost from "./TextQuestion/TextQuestionPost";
+import QuestionList from "./TextQuestion/QuestionList";
 function App() {
   return (
     <div>
@@ -48,6 +50,8 @@ function App() {
      <Route path='/classes/:id/:formId/question' element={<ShowQuestion />} />
      <Route path='/result' element={<Result></Result>}></Route>
      <Route path="classdetail" element={<ClassDetail></ClassDetail>}></Route>
+     <Route path="/submitquestion/:id" element={<TextQuestionPost></TextQuestionPost>}></Route>
+     <Route path="/getquestion/:classId" element={<QuestionList></QuestionList>}></Route>
      
      
     

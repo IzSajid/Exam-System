@@ -3,16 +3,16 @@ import { useParams } from "react-router-dom";
 
 const useClassById=()=>{
     const {id}=useParams();
-    const [user,setUser]=useState([]);
-    // console.log(user)
+    const [users,setUsers]=useState([]);
+//    console.log({users.name});
   
     useEffect(()=>{
-        const url=`http://localhost:3000/classes/${id}`
+        const url=`http://localhost:5000/classes/${id}`
         console.log(url);
         fetch(url)
         .then(res=>res.json())
         .then(data=>{
-           setUser(data)
+           setUsers(data)
 
         })
       
@@ -23,7 +23,7 @@ const useClassById=()=>{
     },[id])
     // console.log(user.name)
    
-    return [user];
+    return [users];
     
 
 }

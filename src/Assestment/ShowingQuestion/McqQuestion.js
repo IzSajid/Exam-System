@@ -8,6 +8,7 @@ import { Navigate, useNavigate, useParams } from 'react-router-dom';
 const McqQuestion = ({ mcq }) => {
     const navigate=useNavigate();
     const {id}=useParams();
+    
     let pivotal=0;
 
   // Destructuring the props from mcq

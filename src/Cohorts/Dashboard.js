@@ -9,7 +9,7 @@ const Dashboard = () => {
    const [classes,setClasses]=useState([]);
    const {id}=useParams();
   const user=useClassById(id);
-     console.log(id)
+     console.log(user)
 //    const {id}=useParams();
 //    useEffect(()=>{
 //     const url= `http://localhost:5000/classes/${id}`
@@ -22,7 +22,14 @@ const Dashboard = () => {
 
     return (
       <div>
+        
+        <div>
         <Menu></Menu>
+      
+        </div>
+        <div>
+          
+        </div>
       </div>
     );
 };
